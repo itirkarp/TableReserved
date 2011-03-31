@@ -30,3 +30,12 @@ gem 'mysql'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :development do
+  gem 'nifty-generators'
+end
+
+gem 'rspec-rails', :group => [:development, :test]
+gem "bcrypt-ruby", :require => "bcrypt"
+gem 'mocha', :group => :test
+gem 'haml'
