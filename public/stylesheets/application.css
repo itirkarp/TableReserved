@@ -1,5 +1,9 @@
 body {
-  background-color: #4b7399;
+  background-image: url("../../images/1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 
@@ -13,13 +17,33 @@ a {
   height: 0;
   overflow: hidden; }
 
-#container {
-  width: 75%;
-  margin: 0 auto;
-  background: white;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px; }
+#container #content {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  opacity: 0.7;
+  padding: 40px;
+  height: 230px;
+  left: 50%;
+  top: 50%;
+  margin: -125px 0 0 -250px;
+  position: absolute;
+  width: 500px;
+  text-align: left; }
+  #container #content #separator {
+    float: left;
+    width: 20px;
+    height: 230px;
+    background: url("../../images/separator.png") repeat-y;
+    margin-left: 42px; }
+  #container #content #login {
+    float: left;
+    width: 200px; }
+    #container #content #login .field {
+      width: 175px; }
+  #container #content #signup {
+    float: right;
+    width: 200px; }
 
 #flash_notice,
 #flash_error,
@@ -59,3 +83,6 @@ a {
     margin: 8px 10px; }
   .error_messages ul {
     margin: 0; }
+
+.primary-button {
+  width: 100px; }
