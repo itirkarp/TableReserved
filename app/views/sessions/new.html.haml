@@ -4,6 +4,10 @@
   #login
     %h3 Member Sign in
 
+    - if flash[:alert]
+      .flash-error
+        = flash[:alert]
+
     = form_tag sessions_path do
       %p
         = label_tag :login, "Username or Email Address"
@@ -20,4 +24,4 @@
     %h3 Become a Member
     %p
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur nisl at justo porttitor quis euismod eros feugiat.
-    = link_to "Request Membership", "#"
+    = link_to "Request Membership", signup_url

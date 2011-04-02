@@ -1,5 +1,5 @@
 body {
-  background-image: url("../../images/1.jpg");
+  background-image: url("../../images/restaurant.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,7 +26,7 @@ a {
   height: 230px;
   left: 50%;
   top: 50%;
-  margin: -125px 0 0 -250px;
+  margin: -215px 0 0 -250px;
   position: absolute;
   width: 500px;
   text-align: left; }
@@ -44,21 +44,8 @@ a {
   #container #content #signup {
     float: right;
     width: 200px; }
-
-#flash_notice,
-#flash_error,
-#flash_alert {
-  padding: 5px 8px;
-  margin: 10px 0; }
-
-#flash_notice {
-  background-color: #ccffcc;
-  border: solid 1px #66cc66; }
-
-#flash_error,
-#flash_alert {
-  background-color: #ffcccc;
-  border: solid 1px #cc6666; }
+    #container #content #signup a {
+      color: white; }
 
 .fieldWithErrors {
   display: inline; }
