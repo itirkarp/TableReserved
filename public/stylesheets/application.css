@@ -30,6 +30,8 @@ a {
   position: absolute;
   width: 500px;
   text-align: left; }
+  #container #content a {
+    color: white; }
   #container #content #separator {
     float: left;
     width: 20px;
@@ -44,8 +46,6 @@ a {
   #container #content #signup {
     float: right;
     width: 200px; }
-    #container #content #signup a {
-      color: white; }
 
 .fieldWithErrors {
   display: inline; }
@@ -73,3 +73,6 @@ a {
 
 .primary-button {
   width: 100px; }
+
+.dull {
+  opacity: 0.4; }
