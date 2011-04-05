@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
   validates_presence_of :password, :on => :create
   validates_confirmation_of :password
-  validates_length_of :password, :minimum => 4, :allow_blank => true
+  validates_length_of :password, :minimum => 6, :allow_blank => true
 
   def self.authenticate(login, pass)
     user = find_by_email(login)
