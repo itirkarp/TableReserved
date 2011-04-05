@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   # new columns need to be added here to be writable through mass assignment
-  attr_accessible :email, :password, :password_confirmation
+  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :zip_code
 
   attr_accessor :password
   before_save :prepare_password

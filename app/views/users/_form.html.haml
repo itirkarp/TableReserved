@@ -1,6 +1,14 @@
 = form_for @user do |f|
   = f.error_messages
   %p
+    = f.label :first_name, "First name"
+    %br
+    = f.text_field :first_name
+  %p
+    = f.label :last_name, "Last name"
+    %br
+    = f.text_field :last_name
+  %p
     = f.label :email, "Email Address"
     %br
     = f.text_field :email
@@ -12,5 +20,9 @@
     = f.label :password_confirmation, "Confirm Password"
     %br
     = f.password_field :password_confirmation
+  %p
+    = f.label :zip_code, "Zip Code"
+    %br
+    = f.text_field :zip_code
   %p
     = f.submit(@user.new_record? ? "Sign up" : "Update")
