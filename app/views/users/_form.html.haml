@@ -24,5 +24,8 @@
     = f.label :zip_code, "Zip Code"
     %br
     = f.text_field :zip_code
+
+  %p By clicking the become a member button, you agree to the terms of service and privacy policy
+
   %p
     = f.submit(@user.new_record? ? "Sign up" : "Update")
