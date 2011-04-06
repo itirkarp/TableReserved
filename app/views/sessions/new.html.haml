@@ -6,7 +6,7 @@
   #logo-container
     = image_tag "reserved.jpg", :class => 'logo'
   #slogan
-    Exclusive pricing at the finest restaurants
+    Exclusive Pricing at the Finest Restaurants
   #login.less-dull
     %h3 Member Sign in
 
@@ -19,12 +19,16 @@
         = label_tag :login, "Email Address"
         %br
         = text_field_tag :login, params[:login], :class => 'field'
+      %br
       %p
         = label_tag :password
         %br
         = password_field_tag :password, nil, :class => 'field'
       %p
-        = link_to "Forgot Password?", "#"
+        = check_box_tag :remember
+        = label_tag :remember, "Remember Me"
+      %p
+        = link_to "Forgot your password?", "#"
       %p
         = submit_tag "Sign in", :class => 'primary-button'
   #separator
@@ -33,6 +37,10 @@
     = render 'users/form'
   #footer.less-dull
     = link_to "Home", "#"
+    |
+    = link_to "About Us", "#"
+    |
+    = link_to "How it Works", "#"
     |
     = link_to "FAQ", "#"
     |
@@ -43,3 +51,5 @@
     = link_to "Terms of Use", "#"
     |
     = link_to "Privacy Policy", "#"
+  #copyright
+    &copy; 2011 Table Reserved, Inc. All Rights Reserved

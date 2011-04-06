@@ -34,13 +34,13 @@ a {
   border: 1px solid black;
   color: white;
   opacity: 0.8;
-  padding: 40px;
-  height: 540px;
+  padding: 20px 40px 20px 40px;
+  height: 585px;
   left: 50%;
   top: 50%;
-  margin: -350px 0 0 -250px;
+  margin: -350px 0 0 -310px;
   position: absolute;
-  width: 500px;
+  width: 618px;
   text-align: left; }
   #container #content .field {
     width: 175px; }
@@ -51,31 +51,36 @@ a {
     width: 27%;
     float: left; }
   #container #content #slogan {
-    font-size: 18px;
-    width: 66%;
+    font-size: 20px;
+    width: 68%;
     float: right; }
   #container #content #separator {
     float: left;
     width: 20px;
-    height: 460px;
+    height: 455px;
     background: url("../../images/separator.png") repeat-y;
     margin-left: 42px; }
   #container #content #login {
     clear: both;
     float: left;
-    width: 200px; }
+    width: 255px; }
     #container #content #login .field {
       width: 175px; }
   #container #content #signup {
     float: right;
-    width: 218px; }
+    width: 255px; }
   #container #content #footer {
     clear: both;
-    float: left;
-    margin: 15px 0 0 36px; }
+    float: left; }
     #container #content #footer a {
-      margin: 0 2px 0 2px;
+      margin: 2px 2px 0 2px;
       text-decoration: none; }
+  #container #content #copyright {
+    clear: both;
+    font-size: 9px;
+    width: 35%;
+    margin-left: 192px;
+    padding-top: 10px; }
 
 .fieldWithErrors {
   display: inline; }
@@ -112,4 +117,4 @@ a {
   opacity: 0.4; }
 
 .logo {
-  width: 130px; }
+  width: 150px; }
