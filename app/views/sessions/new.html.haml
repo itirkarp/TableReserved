@@ -3,7 +3,11 @@
 = content_for :title, "Log in"
 
 #content
-  #login
+  #logo-container
+    = image_tag "reserved.jpg", :class => 'logo'
+  #slogan
+    Exclusive pricing at the finest restaurants
+  #login.less-dull
     %h3 Member Sign in
 
     - if flash[:alert]
@@ -24,8 +28,20 @@
       %p
         = submit_tag "Sign in", :class => 'primary-button'
   #separator
-  #signup
-    %h3 Become a Member
+  #signup.less-dull
+    %h3 Become a Member for free
     %p
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur nisl at justo porttitor quis euismod eros feugiat.
     = link_to "Request Membership", signup_url
+  #footer.less-dull
+    = link_to "Home", "#"
+    |
+    = link_to "FAQ", "#"
+    |
+    = link_to "Careers", "#"
+    |
+    = link_to "Contact Us", "#"
+    |
+    = link_to "Terms of Use", "#"
+    |
+    = link_to "Privacy Policy", "#"

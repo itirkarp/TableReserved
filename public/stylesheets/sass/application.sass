@@ -25,17 +25,25 @@ a
     background-color: #000000
     border: 1px solid black
     color: #FFFFFF
-    opacity: 0.7
+    opacity: 0.8
     padding: 40px
-    height: 230px
+    height: 315px
     left: 50%
     top: 50%
-    margin: -240px 0 0 -250px
+    margin: -280px 0 0 -250px
     position: absolute
     width: 500px
     text-align: left
     a
       color: white
+    #logo-container
+      margin-bottom: 10px
+      width: 27%
+      float: left
+    #slogan
+      font-size: 18px
+      width: 66%
+      float: right
     #separator
       float: left
       width: 20px
@@ -43,14 +51,21 @@ a
       background: url('../../images/separator.png') repeat-y
       margin-left: 42px
     #login
+      clear: both
       float: left
       width: 200px
       .field
         width: 175px
-
     #signup
       float: right
       width: 200px
+    #footer
+      clear: both
+      float: left
+      margin: 15px 0 0 36px
+      a
+        margin: 0 2px 0 2px
+        text-decoration: none
 
 
 //#flash_notice,
@@ -97,5 +112,11 @@ a
 .primary-button
   width: 100px
 
-.dull
+.less-dull
+  opacity: 0.7
+
+.more-dull
   opacity: 0.4
+
+.logo
+  width: 130px
