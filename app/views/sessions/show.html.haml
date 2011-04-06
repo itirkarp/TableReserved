@@ -1,0 +1,17 @@
+- javascript("sessions/show")
+
+#page
+  #logo
+    = image_tag "reserved.jpg"
+  #city CHICAGO
+  #tab-container
+    #tabs
+      %ul
+        %li
+          %a{:href=>"#tabs-1"} tab1
+        %li
+          %a{:href=>"#tabs-2"} tab2
+      #tabs-1
+        If you haven't checked out ...
+      #tabs-2
+        idTabs is only a simple ...

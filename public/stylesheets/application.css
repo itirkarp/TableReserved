@@ -17,6 +17,18 @@ a {
   height: 0;
   overflow: hidden; }
 
+#container #page {
+  width: 70%;
+  margin: 0 auto; }
+  #container #page #logo {
+    width: 20%;
+    float: left; }
+  #container #page #city {
+    width: 15%;
+    height: 100%;
+    float: left; }
+#container #tab-container {
+  clear: both; }
 #container #content {
   background-color: black;
   border: 1px solid black;
