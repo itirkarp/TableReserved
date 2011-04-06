@@ -3,29 +3,25 @@
   %p
     = f.label :first_name, "First name"
     %br
-    = f.text_field :first_name
+    = f.text_field :first_name, :class => 'field'
   %p
     = f.label :last_name, "Last name"
     %br
-    = f.text_field :last_name
+    = f.text_field :last_name, :class => 'field'
   %p
     = f.label :email, "Email Address"
     %br
-    = f.text_field :email
+    = f.text_field :email, :class => 'field'
   %p
     = f.label :password
     %br
-    = f.password_field :password
+    = f.password_field :password, :class => 'field'
   %p
     = f.label :password_confirmation, "Confirm Password"
     %br
-    = f.password_field :password_confirmation
-  %p
-    = f.label :zip_code, "Zip Code"
-    %br
-    = f.text_field :zip_code
+    = f.password_field :password_confirmation, :class => 'field'
 
-  %p By clicking the become a member button, you agree to the terms of service and privacy policy
+  %p By clicking the 'Become a Member' button, you agree to the terms of service and privacy policy
 
   %p
-    = f.submit(@user.new_record? ? "Sign up" : "Update")
+    = f.submit "Become a Member", :class => '.primary-button'

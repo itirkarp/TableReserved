@@ -30,9 +30,7 @@
   #separator
   #signup.less-dull
     %h3 Become a Member for free
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur nisl at justo porttitor quis euismod eros feugiat.
-    = link_to "Request Membership", signup_url
+    = render 'users/form'
   #footer.less-dull
     = link_to "Home", "#"
     |

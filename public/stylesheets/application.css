@@ -23,13 +23,15 @@ a {
   color: white;
   opacity: 0.8;
   padding: 40px;
-  height: 315px;
+  height: 540px;
   left: 50%;
   top: 50%;
-  margin: -280px 0 0 -250px;
+  margin: -350px 0 0 -250px;
   position: absolute;
   width: 500px;
   text-align: left; }
+  #container #content .field {
+    width: 175px; }
   #container #content a {
     color: white; }
   #container #content #logo-container {
@@ -43,7 +45,7 @@ a {
   #container #content #separator {
     float: left;
     width: 20px;
-    height: 230px;
+    height: 460px;
     background: url("../../images/separator.png") repeat-y;
     margin-left: 42px; }
   #container #content #login {
@@ -54,7 +56,7 @@ a {
       width: 175px; }
   #container #content #signup {
     float: right;
-    width: 200px; }
+    width: 218px; }
   #container #content #footer {
     clear: both;
     float: left;
@@ -88,7 +90,8 @@ a {
     margin: 0; }
 
 .primary-button {
-  width: 100px; }
+  width: 100px;
+  opacity: 1; }
 
 .less-dull {
   opacity: 0.7; }
