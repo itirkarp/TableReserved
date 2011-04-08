@@ -49,7 +49,10 @@ a {
   #container #content a {
     color: white; }
   #container #content h2 {
-    color: #6495ed; }
+    color: #1874cd;
+    margin-bottom: 8px; }
+  #container #content #button {
+    opacity: 1; }
   #container #content #logo-container {
     width: 27%;
     float: left; }
@@ -87,6 +90,8 @@ a {
     #container #content #signup #fields {
       clear: both;
       padding-top: 10px; }
+    #container #content #signup #error_messages {
+      margin: 8px 0 8px 0; }
   #container #content #footer {
     clear: both;
     float: left; }
@@ -103,29 +108,7 @@ a {
 .fieldWithErrors {
   display: inline; }
 
-.error_messages {
-  width: 400px;
-  border: 2px solid #cf0000;
-  padding: 0;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  font-size: 12px; }
-  .error_messages h2 {
-    text-align: left;
-    padding: 5px 5px 5px 15px;
-    margin: 0;
-    font-weight: bold;
-    font-size: 12px;
-    background-color: #cc0000;
-    color: white; }
-  .error_messages p {
-    margin: 8px 10px; }
-  .error_messages ul {
-    margin: 0; }
-
 .primary-button {
-  width: 82px;
   height: 26px;
   -moz-border-radius: 6px 6px 6px 6px;
   background-color: #6495ed;

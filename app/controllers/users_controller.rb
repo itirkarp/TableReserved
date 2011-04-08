@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_url, :notice => "Thank you for signing up! You are now logged in."
     else
-      render :action => 'new'
+      render :action => 'sessions/new'
     end
   end
 

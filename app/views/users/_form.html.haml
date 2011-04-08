@@ -1,5 +1,4 @@
 = form_for @user do |f|
-  = f.error_messages
   #first-name
     = f.label :first_name, "First name"
     %br
@@ -11,10 +10,12 @@
     %br
   #fields
     = f.label :email, "Email Address"
+    = f.error_messages.first[:email].first
     %br
     = f.text_field :email, :class => 'field'
   %p
     = f.label :password
+    = f.error_messages.first[:password].first
     %br
     = f.password_field :password, :class => 'field'
   %p
@@ -29,5 +30,5 @@
     = check_box_tag :terms
     = label_tag :terms, "I agree to the terms of service and privacy policy"
 
-  %p
-    = f.submit "Become a Member", :class => '.primary-button'
+  #button
+    = submit_tag "Become a Member", :class => 'primary-button'
