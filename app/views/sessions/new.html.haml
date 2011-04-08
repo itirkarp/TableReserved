@@ -7,8 +7,10 @@
     = image_tag "reserved.jpg", :class => 'logo'
   #slogan
     Exclusive Pricing at the Finest Restaurants
+  #description
+    Join today to view exclusive offers in your area you won't find anywhere else
   #login.less-dull
-    %h3 Member Sign in
+    %h2 Member Sign in
 
     - if flash[:alert]
       .flash-error
@@ -33,7 +35,7 @@
         = submit_tag "Sign in", :class => 'primary-button'
   #separator
   #signup.less-dull
-    %h3 Become a Member for free
+    %h2 Become a Member for Free
     = render 'users/form'
   #footer.less-dull
     = link_to "Home", "#"
