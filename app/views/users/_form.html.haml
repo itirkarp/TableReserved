@@ -28,7 +28,10 @@
     = f.text_field :zip_code, :class => 'field'
   %p
     = check_box_tag :terms
-    = label_tag :terms, "I agree to the terms of service and privacy policy"
+    I agree to the
+    = link_to "Terms of Service", "#"
+    and
+    = link_to "Privacy Policy", "#"
 
   #button
     = submit_tag "Become a Member", :class => 'primary-button'

@@ -29,6 +29,29 @@ a {
     float: left; }
 #container #tab-container {
   clear: both; }
+  #container #tab-container #tabs {
+    float: left;
+    width: 100%;
+    height: 55px;
+    margin-bottom: 30px;
+    background-color: #11083a; }
+    #container #tab-container #tabs div {
+      clear: both;
+      margin-top: 100px; }
+    #container #tab-container #tabs li {
+      float: left;
+      list-style: none;
+      padding: 0 50px; }
+    #container #tab-container #tabs li.first {
+      float: left;
+      list-style: none;
+      padding: 0 50px;
+      margin-left: 450px; }
+    #container #tab-container #tabs a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.3em; }
 #container #content {
   background-color: black;
   border: 1px solid black;
@@ -45,7 +68,7 @@ a {
   #container #content .field {
     width: 175px; }
   #container #content .name-field {
-    width: 90px; }
+    width: 110px; }
   #container #content a {
     color: white; }
   #container #content h2 {
@@ -63,7 +86,8 @@ a {
   #container #content #description {
     clear: both;
     font-size: 15.5px;
-    margin: 0 0 10px 56px; }
+    margin: -34px 0 10px 56px;
+    float: right; }
   #container #content #separator {
     float: left;
     width: 1px;
@@ -92,6 +116,10 @@ a {
       padding-top: 10px; }
     #container #content #signup #error_messages {
       margin: 8px 0 8px 0; }
+    #container #content #signup a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #1874cd; }
   #container #content #footer {
     clear: both;
     float: left; }
@@ -104,9 +132,6 @@ a {
     width: 35%;
     margin-left: 192px;
     padding-top: 10px; }
-
-.fieldWithErrors {
-  display: inline; }
 
 .primary-button {
   height: 26px;
