@@ -17,7 +17,7 @@ a {
   height: 100%; }
   #container #page {
     height: 100%;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     background-color: #f0ffff;
     opacity: 0.9; }
@@ -37,45 +37,50 @@ a {
         #container #page #header #arrow img {
           width: 20px;
           margin: 35px 0 0 15px; }
-  #container #tabs {
-    float: left;
-    width: 100%;
-    height: 55px;
-    margin-bottom: 30px;
-    background: -moz-linear-gradient(center bottom, #11083a 0pt, #2a4187 100%) repeat scroll 0 0 transparent;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #11083a), color-stop(1, #2a4187)); }
-    #container #tabs div {
-      clear: both;
-      margin-top: 100px; }
-    #container #tabs li {
+    #container #page #gap {
+      height: 1%;
+      background-color: #4162ad;
+      opacity: 0.9; }
+    #container #page #tabs {
       float: left;
-      list-style: none;
-      padding: 0 50px;
-      margin-top: -13px;
-      padding-top: 15px;
-      padding-bottom: 15px; }
-    #container #tabs li.first {
-      float: left;
-      list-style: none;
-      padding: 0 50px;
-      margin-left: 450px;
-      margin-top: -13px;
-      padding-top: 15px;
-      padding-bottom: 15px; }
-    #container #tabs li.active {
-      float: left;
-      list-style: none;
-      padding: 0 50px;
-      opacity: 0.5;
-      background-color: #292360;
-      margin-top: -13px;
-      padding-top: 15px;
-      padding-bottom: 15px; }
-    #container #tabs a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.3em; }
+      width: 100%;
+      height: 55px;
+      margin-bottom: 30px;
+      background: -moz-linear-gradient(center bottom, #11083a 0pt, #2a4187 100%) repeat scroll 0 0 transparent;
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #11083a), color-stop(1, #2a4187)); }
+      #container #page #tabs div {
+        clear: both;
+        margin-top: 100px; }
+      #container #page #tabs li {
+        float: right;
+        list-style: none;
+        padding: 0 50px;
+        margin-top: -1.1em;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0.1em solid #2a4187; }
+      #container #page #tabs li.ui-tabs-selected {
+        float: right;
+        list-style: none;
+        padding: 0 50px;
+        opacity: 0.8;
+        background-color: #292360;
+        margin-top: -1.1em;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0.1em solid #2a4187; }
+      #container #page #tabs a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.3em; }
+      #container #page #tabs #restaurant {
+        display: block !important;
+        margin: 2em 0 0 2em;
+        width: 65%;
+        height: 350px;
+        display: block !important;
+        display: block !important; }
   #container #content {
     background-color: black;
     border: 1px solid black;
@@ -172,3 +177,6 @@ a {
 
 .logo {
   width: 160px; }
+
+.ui-tabs-hide {
+  display: none; }

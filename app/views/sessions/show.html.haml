@@ -7,16 +7,17 @@
     #city CHICAGO
     #arrow
       = image_tag "/images/arrow_small.png"
+  #gap
   #tabs
     %ul
-      %li.first
-        %a{:href=>"#tabs-1"} Exclusive Offers
+      %li
+        %a{:href=>"#tabs-3"} About Us
       %li
         %a{:href=>"#tabs-2"} How it Works
       %li
-        %a{:href=>"#tabs-3"} About Us
+        %a{:href=>"#tabs-1"} Exclusive Offers
     #tabs-1
-      Offers go here
+      = render :partial => "shared/restaurant"
     #tabs-2
       This is how we do it
     #tabs-3
