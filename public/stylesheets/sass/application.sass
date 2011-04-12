@@ -29,22 +29,37 @@ a
     opacity: 0.9
     #header
       background-color: #11083A
-      height: 12%
+      height: 10%
       #logo
         width: 20%
         float: left
-        //img
-        //  width: 160px
-      #city
-        margin: 27px 0 0 50px
+        margin: 7px 0 0 17px
+        img
+          width: 132px
+      #seperator
         float: left
-        font-size: 2em
+        background: url('../../images/separator.png') repeat-y
+        height: 43px
+        width: 1px
+        margin-top: 18px
+        opacity: 0.6
+      #city
+        margin: 23px 0 0 60px
+        float: left
+        font-size: 2.2em
         color: white
+        font-family: Courier New
       #arrow
         float: left
         img
           width: 20px
-          margin: 35px 0 0 15px
+          margin: 29px 0 0 15px
+          cursor: pointer
+        .cities
+          list-style: none
+          a
+            color: white
+            text-decoration: none
     #gap
       height: 1%
       background-color: #4162AD
@@ -192,4 +207,7 @@ a
   width: 160px
 
 .ui-tabs-hide
+  display: none
+
+.hidden
   display: none

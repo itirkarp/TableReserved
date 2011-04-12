@@ -23,20 +23,37 @@ a {
     opacity: 0.9; }
     #container #page #header {
       background-color: #11083a;
-      height: 12%; }
+      height: 10%; }
       #container #page #header #logo {
         width: 20%;
-        float: left; }
-      #container #page #header #city {
-        margin: 27px 0 0 50px;
         float: left;
-        font-size: 2em;
-        color: white; }
+        margin: 7px 0 0 17px; }
+        #container #page #header #logo img {
+          width: 132px; }
+      #container #page #header #seperator {
+        float: left;
+        background: url("../../images/separator.png") repeat-y;
+        height: 43px;
+        width: 1px;
+        margin-top: 18px;
+        opacity: 0.6; }
+      #container #page #header #city {
+        margin: 23px 0 0 60px;
+        float: left;
+        font-size: 2.2em;
+        color: white;
+        font-family: Courier New; }
       #container #page #header #arrow {
         float: left; }
         #container #page #header #arrow img {
           width: 20px;
-          margin: 35px 0 0 15px; }
+          margin: 29px 0 0 15px;
+          cursor: pointer; }
+        #container #page #header #arrow .cities {
+          list-style: none; }
+          #container #page #header #arrow .cities a {
+            color: white;
+            text-decoration: none; }
     #container #page #gap {
       height: 1%;
       background-color: #4162ad;
@@ -179,4 +196,7 @@ a {
   width: 160px; }
 
 .ui-tabs-hide {
+  display: none; }
+
+.hidden {
   display: none; }

@@ -4,9 +4,16 @@
   #header
     #logo
       = image_tag "reserved.jpg"
+    #seperator
     #city CHICAGO
     #arrow
-      = image_tag "/images/arrow_small.png"
+      = image_tag "/images/arrow_small.jpeg"
+      %ul.cities.hidden
+        %li
+          %a{:href=>"#"} Boston
+        %li
+          %a{:href=>"#"} New York
+
   #gap
   #tabs
     %ul
