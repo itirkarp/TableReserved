@@ -4,6 +4,7 @@ body
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
+  height: 800px
   font:
     family: Verdana, Helvetica, Arial
     size: 14px
@@ -19,62 +20,69 @@ a
 //  overflow: hidden
 
 #container
+  height: 100%
   #page
+    height: 100%
     width: 70%
     margin: 0 auto
-    #logo
-      width: 20%
-      float: left
-    #city
-      margin: 27px 0 0 50px
-      height: 100%
-      float: left
-      font-size: 2em
-    #arrow
-      float: left
-      img
-        width: 20px
-        margin: 35px 0 0 15px
-  #tab-container
-    clear: both
-    #tabs
-      float: left
-      width: 100%
-      height: 55px
-      margin-bottom: 30px
+    background-color: #F0FFFF
+    opacity: 0.9
+    #header
       background-color: #11083A
-      div
-        clear: both
-        margin-top: 100px
-      li
+      height: 12%
+      #logo
+        width: 20%
         float: left
-        list-style: none
-        padding: 0 50px
-        margin-top: -13px
-        padding-top: 15px
-        padding-bottom: 15px
-      li.first
+      #city
+        margin: 27px 0 0 50px
         float: left
-        list-style: none
-        padding: 0 50px
-        margin-left: 450px
-        margin-top: -13px
-        padding-top: 15px
-        padding-bottom: 15px
-      li.active
-        float: left
-        list-style: none
-        padding: 0 50px
-        opacity: 0.5
-        background-color: #292360
-        margin-top: -13px
-        padding-top: 15px
-        padding-bottom: 15px
-      a
+        font-size: 2em
         color: white
-        text-decoration: none
-        font-weight: bold
-        font-size: 1.3em
+      #arrow
+        float: left
+        img
+          width: 20px
+          margin: 35px 0 0 15px
+  #tabs
+    float: left
+    width: 100%
+    height: 55px
+    margin-bottom: 30px
+    background: -moz-linear-gradient(center bottom , #11083A 0pt, #2A4187 100%) repeat scroll 0 0 transparent
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#11083A),color-stop(1,#2A4187))
+    //linear-gradient(center bottom,#11083A 0,#2A4187 100%)
+    div
+      clear: both
+      margin-top: 100px
+    li
+      float: left
+      list-style: none
+      padding: 0 50px
+      margin-top: -13px
+      padding-top: 15px
+      padding-bottom: 15px
+    li.first
+      float: left
+      list-style: none
+      padding: 0 50px
+      margin-left: 450px
+      margin-top: -13px
+      padding-top: 15px
+      padding-bottom: 15px
+    li.active
+      float: left
+      list-style: none
+      padding: 0 50px
+      opacity: 0.5
+      background-color: #292360
+      margin-top: -13px
+      padding-top: 15px
+      padding-bottom: 15px
+    a
+      color: white
+      text-decoration: none
+      font-weight: bold
+      font-size: 1.3em
   #content
     background-color: #000000
     border: 1px solid black

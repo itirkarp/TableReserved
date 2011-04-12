@@ -4,6 +4,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 800px;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 
@@ -12,41 +13,48 @@ a {
   a img {
     border: none; }
 
-#container #page {
-  width: 70%;
-  margin: 0 auto; }
-  #container #page #logo {
-    width: 20%;
-    float: left; }
-  #container #page #city {
-    margin: 27px 0 0 50px;
+#container {
+  height: 100%; }
+  #container #page {
     height: 100%;
-    float: left;
-    font-size: 2em; }
-  #container #page #arrow {
-    float: left; }
-    #container #page #arrow img {
-      width: 20px;
-      margin: 35px 0 0 15px; }
-#container #tab-container {
-  clear: both; }
-  #container #tab-container #tabs {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #f0ffff;
+    opacity: 0.9; }
+    #container #page #header {
+      background-color: #11083a;
+      height: 12%; }
+      #container #page #header #logo {
+        width: 20%;
+        float: left; }
+      #container #page #header #city {
+        margin: 27px 0 0 50px;
+        float: left;
+        font-size: 2em;
+        color: white; }
+      #container #page #header #arrow {
+        float: left; }
+        #container #page #header #arrow img {
+          width: 20px;
+          margin: 35px 0 0 15px; }
+  #container #tabs {
     float: left;
     width: 100%;
     height: 55px;
     margin-bottom: 30px;
-    background-color: #11083a; }
-    #container #tab-container #tabs div {
+    background: -moz-linear-gradient(center bottom, #11083a 0pt, #2a4187 100%) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #11083a), color-stop(1, #2a4187)); }
+    #container #tabs div {
       clear: both;
       margin-top: 100px; }
-    #container #tab-container #tabs li {
+    #container #tabs li {
       float: left;
       list-style: none;
       padding: 0 50px;
       margin-top: -13px;
       padding-top: 15px;
       padding-bottom: 15px; }
-    #container #tab-container #tabs li.first {
+    #container #tabs li.first {
       float: left;
       list-style: none;
       padding: 0 50px;
@@ -54,7 +62,7 @@ a {
       margin-top: -13px;
       padding-top: 15px;
       padding-bottom: 15px; }
-    #container #tab-container #tabs li.active {
+    #container #tabs li.active {
       float: left;
       list-style: none;
       padding: 0 50px;
@@ -63,91 +71,91 @@ a {
       margin-top: -13px;
       padding-top: 15px;
       padding-bottom: 15px; }
-    #container #tab-container #tabs a {
+    #container #tabs a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.3em; }
-#container #content {
-  background-color: black;
-  border: 1px solid black;
-  color: white;
-  opacity: 0.8;
-  padding: 20px 40px 20px 70px;
-  height: 596px;
-  left: 50%;
-  top: 50%;
-  margin: -350px 0 0 -370px;
-  position: absolute;
-  width: 680px;
-  text-align: left; }
-  #container #content .field {
-    width: 175px; }
-  #container #content .name-field {
-    width: 110px; }
-  #container #content a {
-    color: white; }
-  #container #content h2 {
-    color: #1874cd;
-    margin-bottom: 8px; }
-  #container #content #button {
-    opacity: 1; }
-  #container #content #logo-container {
-    width: 27%;
-    float: left; }
-  #container #content #slogan {
-    font-size: 23px;
-    width: 68%;
-    float: right; }
-  #container #content #description {
-    clear: both;
-    font-size: 15.5px;
-    margin: -34px 0 10px 56px;
-    float: right; }
-  #container #content #separator {
-    float: left;
-    width: 1px;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 455px;
-    background: url("../../images/separator.png") repeat-y;
-    margin-left: 42px; }
-  #container #content #login {
-    clear: both;
-    float: left;
-    width: 270px; }
-    #container #content #login .field {
+  #container #content {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    opacity: 0.8;
+    padding: 20px 40px 20px 70px;
+    height: 596px;
+    left: 50%;
+    top: 50%;
+    margin: -350px 0 0 -370px;
+    position: absolute;
+    width: 680px;
+    text-align: left; }
+    #container #content .field {
       width: 175px; }
-  #container #content #signup {
-    float: right;
-    width: 280px;
-    height: 430px; }
-    #container #content #signup #first-name {
+    #container #content .name-field {
+      width: 110px; }
+    #container #content a {
+      color: white; }
+    #container #content h2 {
+      color: #1874cd;
+      margin-bottom: 8px; }
+    #container #content #button {
+      opacity: 1; }
+    #container #content #logo-container {
+      width: 27%;
       float: left; }
-    #container #content #signup #last-name {
-      float: left;
-      margin-left: 20px; }
-    #container #content #signup #fields {
+    #container #content #slogan {
+      font-size: 23px;
+      width: 68%;
+      float: right; }
+    #container #content #description {
       clear: both;
+      font-size: 15.5px;
+      margin: -34px 0 10px 56px;
+      float: right; }
+    #container #content #separator {
+      float: left;
+      width: 1px;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 455px;
+      background: url("../../images/separator.png") repeat-y;
+      margin-left: 42px; }
+    #container #content #login {
+      clear: both;
+      float: left;
+      width: 270px; }
+      #container #content #login .field {
+        width: 175px; }
+    #container #content #signup {
+      float: right;
+      width: 280px;
+      height: 430px; }
+      #container #content #signup #first-name {
+        float: left; }
+      #container #content #signup #last-name {
+        float: left;
+        margin-left: 20px; }
+      #container #content #signup #fields {
+        clear: both;
+        padding-top: 10px; }
+      #container #content #signup #error_messages {
+        margin: 8px 0 8px 0; }
+      #container #content #signup a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #1874cd; }
+    #container #content #footer {
+      clear: both;
+      float: left; }
+      #container #content #footer a {
+        margin: 2px 2px 0 2px;
+        text-decoration: none; }
+    #container #content #copyright {
+      clear: both;
+      font-size: 9px;
+      width: 35%;
+      margin-left: 192px;
       padding-top: 10px; }
-    #container #content #signup #error_messages {
-      margin: 8px 0 8px 0; }
-    #container #content #signup a {
-      text-decoration: none;
-      font-weight: bold;
-      color: #1874cd; }
-  #container #content #footer {
-    clear: both;
-    float: left; }
-    #container #content #footer a {
-      margin: 2px 2px 0 2px;
-      text-decoration: none; }
-  #container #content #copyright {
-    clear: both;
-    font-size: 9px;
-    width: 35%;
-    margin-left: 192px;
-    padding-top: 10px; }
 
 .primary-button {
   height: 26px;

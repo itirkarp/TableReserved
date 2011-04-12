@@ -1,23 +1,23 @@
 - javascript("sessions/show")
 
 #page
-  #logo
-    = image_tag "reserved.jpg"
-  #city CHICAGO
-  #arrow
-    = image_tag "/images/arrow_small.png"
-  #tab-container
-    #tabs
-      %ul
-        %li.first
-          %a{:href=>"#tabs-1"} Exclusive Offers
-        %li
-          %a{:href=>"#tabs-2"} How it Works
-        %li
-          %a{:href=>"#tabs-3"} About Us
-      #tabs-1
-        Offers go here
-      #tabs-2
-        This is how we do it
-      #tabs-3
-        Get to know us
+  #header
+    #logo
+      = image_tag "reserved.jpg"
+    #city CHICAGO
+    #arrow
+      = image_tag "/images/arrow_small.png"
+  #tabs
+    %ul
+      %li.first
+        %a{:href=>"#tabs-1"} Exclusive Offers
+      %li
+        %a{:href=>"#tabs-2"} How it Works
+      %li
+        %a{:href=>"#tabs-3"} About Us
+    #tabs-1
+      Offers go here
+    #tabs-2
+      This is how we do it
+    #tabs-3
+      Get to know us
