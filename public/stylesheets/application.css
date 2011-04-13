@@ -104,7 +104,7 @@ a {
     color: white;
     opacity: 0.8;
     padding: 20px 40px 20px 70px;
-    height: 596px;
+    height: 575px;
     left: 50%;
     top: 50%;
     margin: -350px 0 0 -370px;
@@ -131,9 +131,10 @@ a {
       float: right; }
     #container #content #description {
       clear: both;
-      font-size: 15.5px;
+      font-size: 1.3em;
       margin: -34px 0 10px 56px;
-      float: right; }
+      float: right;
+      font-style: italic; }
     #container #content #separator {
       float: left;
       width: 1px;
@@ -168,7 +169,8 @@ a {
         color: #1874cd; }
     #container #content #footer {
       clear: both;
-      float: left; }
+      float: left;
+      margin-top: 10px; }
       #container #content #footer a {
         margin: 2px 2px 0 2px;
         text-decoration: none; }
