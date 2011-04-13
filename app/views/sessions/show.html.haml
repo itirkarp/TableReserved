@@ -13,6 +13,11 @@
           %a{:href=>"#"} Boston
         %li
           %a{:href=>"#"} New York
+    #access-links
+      = link_to "Log Out", logout_url
+      #seperator
+      = link_to "My Account", "#"
+
 
   #gap
   #tabs
@@ -21,7 +26,7 @@
         %a{:href=>"#tabs-3"} About Us
       %li
         %a{:href=>"#tabs-2"} How it Works
-      %li
+      %li.ui-tabs-selected
         %a{:href=>"#tabs-1"} Exclusive Offers
     #tabs-1
       = render :partial => "shared/restaurant"

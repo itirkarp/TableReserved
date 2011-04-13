@@ -54,6 +54,20 @@ a {
           #container #page #header #arrow .cities a {
             color: white;
             text-decoration: none; }
+      #container #page #header #access-links {
+        float: right; }
+        #container #page #header #access-links a {
+          margin: 29px 20px 0 20px;
+          float: right;
+          text-decoration: none;
+          color: white; }
+        #container #page #header #access-links #seperator {
+          float: right;
+          background: url("../../images/separator.png") repeat-y;
+          height: 20px;
+          width: 1px;
+          opacity: 0.6;
+          margin-top: 2em; }
     #container #page #gap {
       height: 1%;
       background-color: #4162ad;
