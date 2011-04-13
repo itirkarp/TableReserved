@@ -1,5 +1,13 @@
-#restaurant
-  #heading
-    Restaurant
-  #photo
-    = image_tag "/images/first_restaurant.jpg"
+= content_for :title, "Table Reserved"
+
+= form_tag "#" do
+  #restaurant
+    #heading
+      = hidden_field_tag "restaurant_id", 1
+      %p.restaurant-name
+        An Awesome Restaurant
+      = submit_tag "View Offer", :class => 'primary-button'
+      %p.description
+        Enjoy delectable Italian cuisine at this rooftop restaurant located in the heart of the city
+    #photo
+      = image_tag "/images/first_restaurant.jpg"

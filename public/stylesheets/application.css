@@ -79,9 +79,6 @@ a {
       margin-bottom: 30px;
       background: -moz-linear-gradient(center bottom, #11083a 0pt, #2a4187 100%) repeat scroll 0 0 transparent;
       background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #11083a), color-stop(1, #2a4187)); }
-      #container #page #tabs div {
-        clear: both;
-        margin-top: 100px; }
       #container #page #tabs li {
         float: right;
         list-style: none;
@@ -105,13 +102,27 @@ a {
         text-decoration: none;
         font-weight: bold;
         font-size: 1.3em; }
+      #container #page #tabs #tabs-2 {
+        margin: 9em 0 0 2em; }
+      #container #page #tabs #tabs-3 {
+        margin: 9em 0 0 2em; }
       #container #page #tabs #restaurant {
-        display: block !important;
-        margin: 2em 0 0 2em;
-        width: 65%;
-        height: 350px;
-        display: block !important;
-        display: block !important; }
+        margin: 9em 0 0 2em;
+        width: 615px;
+        height: 27em;
+        border: 1px solid #c1cdcd; }
+        #container #page #tabs #restaurant #heading {
+          padding-left: 1em;
+          margin-bottom: 1em; }
+        #container #page #tabs #restaurant p {
+          margin: 0.5em 0;
+          float: left; }
+        #container #page #tabs #restaurant .primary-button {
+          float: left;
+          margin-top: 1em; }
+        #container #page #tabs #restaurant img {
+          height: 300px;
+          width: 615px; }
   #container #content {
     background-color: black;
     border: 1px solid black;
@@ -216,3 +227,7 @@ a {
 
 .hidden {
   display: none; }
+
+.restaurant-name {
+  font-size: 1.5em;
+  width: 23em; }
