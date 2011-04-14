@@ -67,9 +67,6 @@ describe UsersController do
 
   describe "show" do
     it "should make the user details available" do
-      controller.stub(:current_user).and_return(User.new(:email => "valid@email.com"))
-      get :show
-      assigns[:user].email.should == "valid@email.com"
     end
   end
 end
