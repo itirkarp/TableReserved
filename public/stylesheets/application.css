@@ -113,21 +113,39 @@ a {
       #container #page #tabs #restaurant {
         clear: both;
         margin: 4em 0 0 2em;
-        width: 615px;
-        height: 27em;
+        width: 65em;
+        height: 28em;
         border: 1px solid #c1cdcd; }
         #container #page #tabs #restaurant #heading {
-          padding-left: 1em;
-          margin-bottom: 1em; }
-        #container #page #tabs #restaurant p {
-          margin: 0.5em 0;
-          float: left; }
+          float: left;
+          padding: 0 0 0.5em 1em;
+          height: 4.5; }
+          #container #page #tabs #restaurant #heading p {
+            margin: 0 0;
+            float: left; }
+          #container #page #tabs #restaurant #heading .description {
+            margin-top: -0.2em; }
         #container #page #tabs #restaurant .primary-button {
           float: left;
           margin-top: 1em; }
-        #container #page #tabs #restaurant img {
-          height: 300px;
-          width: 615px; }
+        #container #page #tabs #restaurant #photo {
+          float: left; }
+          #container #page #tabs #restaurant #photo img {
+            height: 23.5em;
+            width: 43em; }
+        #container #page #tabs #restaurant #information {
+          float: left;
+          border-top: 1px solid #c1cdcd;
+          width: 20em;
+          padding: 0.3em 0 0 2em; }
+          #container #page #tabs #restaurant #information img {
+            height: 9em; }
+          #container #page #tabs #restaurant #information p {
+            margin: 0 0; }
+          #container #page #tabs #restaurant #information .fields {
+            margin-top: 1em;
+            font-size: 1.3em;
+            color: #1874cd; }
     #container #page #footer {
       width: 60%;
       margin: 0 0 2em 14em;
@@ -244,4 +262,4 @@ a {
 
 .restaurant-name {
   font-size: 1.5em;
-  width: 23em; }
+  width: 38em; }
