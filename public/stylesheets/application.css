@@ -72,7 +72,6 @@ a {
     width: 65%;
     margin: 0 auto;
     background-color: #f0ffff;
-    opacity: 0.9;
     position: relative; }
     #container #page #tabs {
       float: left;
@@ -119,12 +118,15 @@ a {
         #container #page #tabs #restaurant #heading {
           float: left;
           padding: 0 0 0.5em 1em;
-          height: 4.5; }
+          height: 4.5;
+          background: -moz-linear-gradient(center bottom, #f7f7f7 10pt, #f0ffff 100%) repeat scroll 0 0 transparent;
+          background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #f0ffff)); }
           #container #page #tabs #restaurant #heading p {
             margin: 0 0;
             float: left; }
           #container #page #tabs #restaurant #heading .description {
-            margin-top: -0.2em; }
+            margin-top: -0.2em;
+            color: #1874cd; }
         #container #page #tabs #restaurant .primary-button {
           float: left;
           margin-top: 1em; }
