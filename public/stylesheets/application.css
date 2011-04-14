@@ -38,16 +38,31 @@ a {
       color: white;
       font-family: Courier New; }
     #container #header #arrow {
-      float: left; }
+      float: left;
+      position: relative;
+      z-index: 900; }
       #container #header #arrow img {
         width: 20px;
         margin: 29px 0 0 15px;
         cursor: pointer; }
-      #container #header #arrow .cities {
-        list-style: none; }
-        #container #header #arrow .cities a {
-          color: white;
-          text-decoration: none; }
+      #container #header #arrow #cities {
+        position: absolute;
+        background-color: #11083a;
+        z-index: 999;
+        margin-left: -9.5em;
+        width: 13em; }
+        #container #header #arrow #cities ul {
+          list-style: none;
+          padding-left: 0; }
+          #container #header #arrow #cities ul li {
+            font-family: Courier New;
+            padding: 0.4em 0 0.3em 1.5em; }
+            #container #header #arrow #cities ul li:hover {
+              background-color: #1d1d51; }
+            #container #header #arrow #cities ul li a {
+              color: lightGrey;
+              text-decoration: none;
+              display: block; }
     #container #header #access-links {
       float: right;
       margin-right: 17em; }
@@ -80,74 +95,80 @@ a {
       margin-bottom: 30px;
       background: -moz-linear-gradient(center bottom, #11083a 0pt, #2a4187 100%) repeat scroll 0 0 transparent;
       background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #11083a), color-stop(1, #2a4187)); }
-      #container #page #tabs li {
-        float: right;
-        list-style: none;
-        padding: 0 50px;
-        margin-top: -1.1em;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border: 0.1em solid #2a4187; }
-      #container #page #tabs li.ui-tabs-selected {
-        float: right;
-        list-style: none;
-        padding: 0 50px;
-        opacity: 0.8;
-        background-color: #292360;
-        margin-top: -1.1em;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border: 0.1em solid #2a4187; }
-      #container #page #tabs a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.3em; }
+      #container #page #tabs #tab-container {
+        width: 100%;
+        position: relative; }
+        #container #page #tabs #tab-container ul li {
+          float: right;
+          list-style: none;
+          padding: 0 50px;
+          margin-top: -1.1em;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border: 0.1em solid #2a4187; }
+        #container #page #tabs #tab-container ul li.ui-tabs-selected {
+          float: right;
+          list-style: none;
+          padding: 0 50px;
+          opacity: 0.8;
+          background-color: #292360;
+          margin-top: -1.1em;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border: 0.1em solid #2a4187; }
+        #container #page #tabs #tab-container ul a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1.3em;
+          display: block; }
       #container #page #tabs #tabs-1 {
-        margin-top: 6em; }
+        float: left; }
+        #container #page #tabs #tabs-1 #restaurant {
+          clear: both;
+          margin: 4em 0 0 2em;
+          width: 65em;
+          height: 28em;
+          border: 1px solid #c1cdcd; }
+          #container #page #tabs #tabs-1 #restaurant #heading {
+            float: left;
+            padding: 0 0 0.5em 1em;
+            height: 4.5;
+            background: -moz-linear-gradient(center bottom, #f7f7f7 10pt, #f0ffff 100%) repeat scroll 0 0 transparent;
+            background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #f0ffff)); }
+            #container #page #tabs #tabs-1 #restaurant #heading p {
+              margin: 0 0;
+              float: left; }
+            #container #page #tabs #tabs-1 #restaurant #heading .description {
+              margin-top: -0.2em;
+              color: #1874cd; }
+          #container #page #tabs #tabs-1 #restaurant .primary-button {
+            float: left;
+            margin-top: 1em; }
+          #container #page #tabs #tabs-1 #restaurant #photo {
+            float: left; }
+            #container #page #tabs #tabs-1 #restaurant #photo img {
+              height: 23.5em;
+              width: 43em; }
+          #container #page #tabs #tabs-1 #restaurant #information {
+            float: left;
+            border-top: 1px solid #c1cdcd;
+            width: 20em;
+            padding: 0.3em 0 0 2em; }
+            #container #page #tabs #tabs-1 #restaurant #information img {
+              height: 9em; }
+            #container #page #tabs #tabs-1 #restaurant #information p {
+              margin: 0 0; }
+            #container #page #tabs #tabs-1 #restaurant #information .fields {
+              margin-top: 1em;
+              font-size: 1.3em;
+              color: #1874cd; }
       #container #page #tabs #tabs-2 {
+        float: left;
         margin: 9em 0 0 2em; }
       #container #page #tabs #tabs-3 {
+        float: left;
         margin: 9em 0 0 2em; }
-      #container #page #tabs #restaurant {
-        clear: both;
-        margin: 4em 0 0 2em;
-        width: 65em;
-        height: 28em;
-        border: 1px solid #c1cdcd; }
-        #container #page #tabs #restaurant #heading {
-          float: left;
-          padding: 0 0 0.5em 1em;
-          height: 4.5;
-          background: -moz-linear-gradient(center bottom, #f7f7f7 10pt, #f0ffff 100%) repeat scroll 0 0 transparent;
-          background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #f0ffff)); }
-          #container #page #tabs #restaurant #heading p {
-            margin: 0 0;
-            float: left; }
-          #container #page #tabs #restaurant #heading .description {
-            margin-top: -0.2em;
-            color: #1874cd; }
-        #container #page #tabs #restaurant .primary-button {
-          float: left;
-          margin-top: 1em; }
-        #container #page #tabs #restaurant #photo {
-          float: left; }
-          #container #page #tabs #restaurant #photo img {
-            height: 23.5em;
-            width: 43em; }
-        #container #page #tabs #restaurant #information {
-          float: left;
-          border-top: 1px solid #c1cdcd;
-          width: 20em;
-          padding: 0.3em 0 0 2em; }
-          #container #page #tabs #restaurant #information img {
-            height: 9em; }
-          #container #page #tabs #restaurant #information p {
-            margin: 0 0; }
-          #container #page #tabs #restaurant #information .fields {
-            margin-top: 1em;
-            font-size: 1.3em;
-            color: #1874cd; }
     #container #page #footer {
       width: 60%;
       margin: 0 0 2em 14em;
@@ -264,4 +285,4 @@ a {
 
 .restaurant-name {
   font-size: 1.5em;
-  width: 38em; }
+  width: 36em; }

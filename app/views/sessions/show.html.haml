@@ -9,11 +9,18 @@
   #city CHICAGO
   #arrow
     = image_tag "/images/arrow_small.jpeg"
-    %ul.cities.hidden
-      %li
-        %a{:href=>"#"} Boston
-      %li
-        %a{:href=>"#"} New York
+    #cities.hidden
+      %ul
+        %li
+          %a{:href=>"#"} Boston
+        %li
+          %a{:href=>"#"} New York
+        %li
+          %a{:href=>"#"} Miami
+        %li
+          %a{:href=>"#"} Miami
+        %li
+          %a{:href=>"#"} Miami
   #access-links
     = link_to "Log Out", logout_url
     #seperator
@@ -21,13 +28,14 @@
 #gap
 #page
   #tabs
-    %ul
-      %li
-        %a{:href=>"#tabs-3"} About Us
-      %li
-        %a{:href=>"#tabs-2"} How it Works
-      %li.ui-tabs-selected
-        %a{:href=>"#tabs-1"} Exclusive Offers
+    #tab-container
+      %ul
+        %li
+          %a{:href=>"#tabs-3"} About Us
+        %li
+          %a{:href=>"#tabs-2"} How it Works
+        %li.ui-tabs-selected
+          %a{:href=>"#tabs-1"} Exclusive Offers
     #tabs-1
       = render "shared/restaurant"
       = render "shared/restaurant"

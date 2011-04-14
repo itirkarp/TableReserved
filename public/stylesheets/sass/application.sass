@@ -45,15 +45,30 @@ a
       font-family: Courier New
     #arrow
       float: left
+      position: relative
+      z-index: 900
       img
         width: 20px
         margin: 29px 0 0 15px
         cursor: pointer
-      .cities
-        list-style: none
-        a
-          color: white
-          text-decoration: none
+      #cities
+        position: absolute
+        background-color: #11083A
+        z-index: 999
+        margin-left: -9.5em
+        width: 13em
+        ul
+          list-style: none
+          padding-left: 0
+          li
+            font-family: Courier New
+            padding: 0.4em 0 0.3em 1.5em
+            &:hover
+              background-color: #1D1D51
+            a
+              color: lightGrey
+              text-decoration: none
+              display: block
     #access-links
       float: right
       margin-right: 17em
@@ -91,75 +106,81 @@ a
       //div
       //  clear: both
       //  margin-top: 100px
-      li
-        float: right
-        list-style: none
-        padding: 0 50px
-        margin-top: -1.1em
-        padding-top: 15px
-        padding-bottom: 15px
-        border: 0.1em solid #2A4187
-      li.ui-tabs-selected
-        float: right
-        list-style: none
-        padding: 0 50px
-        opacity: 0.8
-        background-color: #292360
-        margin-top: -1.1em
-        padding-top: 15px
-        padding-bottom: 15px
-        border: 0.1em solid #2A4187
-      a
-        color: white
-        text-decoration: none
-        font-weight: bold
-        font-size: 1.3em
+      #tab-container
+        width: 100%
+        position: relative
+        ul
+          li
+            float: right
+            list-style: none
+            padding: 0 50px
+            margin-top: -1.1em
+            padding-top: 15px
+            padding-bottom: 15px
+            border: 0.1em solid #2A4187
+          li.ui-tabs-selected
+            float: right
+            list-style: none
+            padding: 0 50px
+            opacity: 0.8
+            background-color: #292360
+            margin-top: -1.1em
+            padding-top: 15px
+            padding-bottom: 15px
+            border: 0.1em solid #2A4187
+          a
+            color: white
+            text-decoration: none
+            font-weight: bold
+            font-size: 1.3em
+            display: block
       #tabs-1
-        margin-top: 6em
+        float: left
+        #restaurant
+          clear: both
+          margin: 4em 0 0 2em
+          width: 65em
+          height: 28em
+          border: 1px solid #C1CDCD
+          #heading
+            float: left
+            padding: 0 0 0.5em 1em
+            height: 4.5
+            background: -moz-linear-gradient(center bottom , #F7F7F7 10pt, #F0FFFF 100%) repeat scroll 0 0 transparent
+            background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#F7F7F7),color-stop(1,#F0FFFF))
+            p
+              margin: 0 0
+              float: left
+            .description
+              margin-top: -0.2em
+              color: #1874CD
+          .primary-button
+            float: left
+            margin-top: 1em
+          #photo
+            float: left
+            img
+              height: 23.5em
+              width: 43em
+          #information
+            float: left
+            border-top: 1px solid #C1CDCD
+            width: 20em
+            padding: 0.3em 0 0 2em
+            img
+              height: 9em
+            p
+              margin: 0 0
+            .fields
+              margin-top: 1em
+              font-size: 1.3em
+              color: #1874CD
       #tabs-2
+        float: left
         margin: 9em 0 0 2em
       #tabs-3
+        float: left
         margin: 9em 0 0 2em
-      #restaurant
-        clear: both
-        margin: 4em 0 0 2em
-        width: 65em
-        height: 28em
-        border: 1px solid #C1CDCD
-        #heading
-          float: left
-          padding: 0 0 0.5em 1em
-          height: 4.5
-          background: -moz-linear-gradient(center bottom , #F7F7F7 10pt, #F0FFFF 100%) repeat scroll 0 0 transparent
-          background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#F7F7F7),color-stop(1,#F0FFFF))
-          p
-            margin: 0 0
-            float: left
-          .description
-            margin-top: -0.2em
-            color: #1874CD
-        .primary-button
-          float: left
-          margin-top: 1em
-        #photo
-          float: left
-          img
-            height: 23.5em
-            width: 43em
-        #information
-          float: left
-          border-top: 1px solid #C1CDCD
-          width: 20em
-          padding: 0.3em 0 0 2em
-          img
-            height: 9em
-          p
-            margin: 0 0
-          .fields
-            margin-top: 1em
-            font-size: 1.3em
-            color: #1874CD
-
     #footer
       width: 60%
       margin: 0 0 2em 14em
@@ -278,4 +299,4 @@ a
 
 .restaurant-name
   font-size: 1.5em
-  width: 38em
+  width: 36em
