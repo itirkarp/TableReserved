@@ -4,7 +4,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 800px;
+  height: 1100px;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 
@@ -15,63 +15,65 @@ a {
 
 #container {
   height: 100%; }
+  #container #header {
+    background-color: #11083a;
+    height: 6em; }
+    #container #header #logo {
+      width: 12%;
+      float: left;
+      margin: 7px 0 0 252px; }
+      #container #header #logo img {
+        width: 132px; }
+    #container #header #seperator {
+      float: left;
+      background: url("../../images/separator.png") repeat-y;
+      height: 43px;
+      width: 1px;
+      margin-top: 18px;
+      opacity: 0.6; }
+    #container #header #city {
+      margin: 23px 0 0 60px;
+      float: left;
+      font-size: 2.2em;
+      color: white;
+      font-family: Courier New; }
+    #container #header #arrow {
+      float: left; }
+      #container #header #arrow img {
+        width: 20px;
+        margin: 29px 0 0 15px;
+        cursor: pointer; }
+      #container #header #arrow .cities {
+        list-style: none; }
+        #container #header #arrow .cities a {
+          color: white;
+          text-decoration: none; }
+    #container #header #access-links {
+      float: right;
+      margin-right: 17em; }
+      #container #header #access-links a {
+        margin: 29px 23px 0 23px;
+        float: right;
+        text-decoration: none;
+        color: white; }
+      #container #header #access-links #seperator {
+        float: right;
+        background: url("../../images/separator.png") repeat-y;
+        height: 20px;
+        width: 1px;
+        opacity: 0.6;
+        margin-top: 2em; }
+  #container #gap {
+    height: 0.7em;
+    background-color: #4162ad;
+    opacity: 0.9; }
   #container #page {
     height: 100%;
-    width: 60%;
+    width: 65%;
     margin: 0 auto;
     background-color: #f0ffff;
-    opacity: 0.9; }
-    #container #page #header {
-      background-color: #11083a;
-      height: 10%; }
-      #container #page #header #logo {
-        width: 20%;
-        float: left;
-        margin: 7px 0 0 17px; }
-        #container #page #header #logo img {
-          width: 132px; }
-      #container #page #header #seperator {
-        float: left;
-        background: url("../../images/separator.png") repeat-y;
-        height: 43px;
-        width: 1px;
-        margin-top: 18px;
-        opacity: 0.6; }
-      #container #page #header #city {
-        margin: 23px 0 0 60px;
-        float: left;
-        font-size: 2.2em;
-        color: white;
-        font-family: Courier New; }
-      #container #page #header #arrow {
-        float: left; }
-        #container #page #header #arrow img {
-          width: 20px;
-          margin: 29px 0 0 15px;
-          cursor: pointer; }
-        #container #page #header #arrow .cities {
-          list-style: none; }
-          #container #page #header #arrow .cities a {
-            color: white;
-            text-decoration: none; }
-      #container #page #header #access-links {
-        float: right; }
-        #container #page #header #access-links a {
-          margin: 29px 20px 0 20px;
-          float: right;
-          text-decoration: none;
-          color: white; }
-        #container #page #header #access-links #seperator {
-          float: right;
-          background: url("../../images/separator.png") repeat-y;
-          height: 20px;
-          width: 1px;
-          opacity: 0.6;
-          margin-top: 2em; }
-    #container #page #gap {
-      height: 1%;
-      background-color: #4162ad;
-      opacity: 0.9; }
+    opacity: 0.9;
+    position: relative; }
     #container #page #tabs {
       float: left;
       width: 100%;
@@ -102,12 +104,15 @@ a {
         text-decoration: none;
         font-weight: bold;
         font-size: 1.3em; }
+      #container #page #tabs #tabs-1 {
+        margin-top: 6em; }
       #container #page #tabs #tabs-2 {
         margin: 9em 0 0 2em; }
       #container #page #tabs #tabs-3 {
         margin: 9em 0 0 2em; }
       #container #page #tabs #restaurant {
-        margin: 9em 0 0 2em;
+        clear: both;
+        margin: 4em 0 0 2em;
         width: 615px;
         height: 27em;
         border: 1px solid #c1cdcd; }
@@ -123,6 +128,15 @@ a {
         #container #page #tabs #restaurant img {
           height: 300px;
           width: 615px; }
+    #container #page #footer {
+      width: 60%;
+      margin: 0 0 2em 14em;
+      position: absolute;
+      bottom: 0; }
+      #container #page #footer a {
+        margin: 2px 2px 0 2px;
+        text-decoration: none;
+        color: black; }
   #container #content {
     background-color: black;
     border: 1px solid black;

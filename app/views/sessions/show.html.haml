@@ -1,25 +1,24 @@
 - javascript("sessions/show")
 
-#page
-  #header
-    #logo
-      = image_tag "reserved.jpg"
+
+#header
+  #logo
+    = image_tag "reserved.jpg"
+  #seperator
+  #city CHICAGO
+  #arrow
+    = image_tag "/images/arrow_small.jpeg"
+    %ul.cities.hidden
+      %li
+        %a{:href=>"#"} Boston
+      %li
+        %a{:href=>"#"} New York
+  #access-links
+    = link_to "Log Out", logout_url
     #seperator
-    #city CHICAGO
-    #arrow
-      = image_tag "/images/arrow_small.jpeg"
-      %ul.cities.hidden
-        %li
-          %a{:href=>"#"} Boston
-        %li
-          %a{:href=>"#"} New York
-    #access-links
-      = link_to "Log Out", logout_url
-      #seperator
-      = link_to "My Account", "#"
-
-
-  #gap
+    = link_to "My Account", "#"
+#gap
+#page
   #tabs
     %ul
       %li
@@ -29,8 +28,10 @@
       %li.ui-tabs-selected
         %a{:href=>"#tabs-1"} Exclusive Offers
     #tabs-1
-      = render :partial => "shared/restaurant"
+      = render "shared/restaurant"
+      = render "shared/restaurant"
     #tabs-2
       This is how we do it
     #tabs-3
       Get to know us
+  = render 'shared/footer'

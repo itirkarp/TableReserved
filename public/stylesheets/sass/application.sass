@@ -4,7 +4,7 @@ body
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
-  height: 800px
+  height: 1100px
   font:
     family: Verdana, Helvetica, Arial
     size: 14px
@@ -21,63 +21,65 @@ a
 
 #container
   height: 100%
+  #header
+    background-color: #11083A
+    height: 6em
+    #logo
+      width: 12%
+      float: left
+      margin: 7px 0 0 252px
+      img
+        width: 132px
+    #seperator
+      float: left
+      background: url('../../images/separator.png') repeat-y
+      height: 43px
+      width: 1px
+      margin-top: 18px
+      opacity: 0.6
+    #city
+      margin: 23px 0 0 60px
+      float: left
+      font-size: 2.2em
+      color: white
+      font-family: Courier New
+    #arrow
+      float: left
+      img
+        width: 20px
+        margin: 29px 0 0 15px
+        cursor: pointer
+      .cities
+        list-style: none
+        a
+          color: white
+          text-decoration: none
+    #access-links
+      float: right
+      margin-right: 17em
+      a
+        margin: 29px 23px 0 23px
+        float: right
+        text-decoration: none
+        color: white
+      #seperator
+        float: right
+        background: url('../../images/separator.png') repeat-y
+        height: 20px
+        width: 1px
+        opacity: 0.6
+        margin-top: 2em
+  #gap
+    height: 0.7em
+    background-color: #4162AD
+    opacity: 0.9
   #page
     height: 100%
-    width: 60%
+    width: 65%
     margin: 0 auto
     background-color: #F0FFFF
     opacity: 0.9
-    #header
-      background-color: #11083A
-      height: 10%
-      #logo
-        width: 20%
-        float: left
-        margin: 7px 0 0 17px
-        img
-          width: 132px
-      #seperator
-        float: left
-        background: url('../../images/separator.png') repeat-y
-        height: 43px
-        width: 1px
-        margin-top: 18px
-        opacity: 0.6
-      #city
-        margin: 23px 0 0 60px
-        float: left
-        font-size: 2.2em
-        color: white
-        font-family: Courier New
-      #arrow
-        float: left
-        img
-          width: 20px
-          margin: 29px 0 0 15px
-          cursor: pointer
-        .cities
-          list-style: none
-          a
-            color: white
-            text-decoration: none
-      #access-links
-        float: right
-        a
-          margin: 29px 20px 0 20px
-          float: right
-          text-decoration: none
-          color: white
-        #seperator
-          float: right
-          background: url('../../images/separator.png') repeat-y
-          height: 20px
-          width: 1px
-          opacity: 0.6
-          margin-top: 2em
-    #gap
-      height: 1%
-      background-color: #4162AD
-      opacity: 0.9
+    position: relative
     #tabs
       float: left
       width: 100%
@@ -112,12 +114,15 @@ a
         text-decoration: none
         font-weight: bold
         font-size: 1.3em
+      #tabs-1
+        margin-top: 6em
       #tabs-2
         margin: 9em 0 0 2em
       #tabs-3
         margin: 9em 0 0 2em
       #restaurant
-        margin: 9em 0 0 2em
+        clear: both
+        margin: 4em 0 0 2em
         width: 615px
         height: 27em
         border: 1px solid #C1CDCD
@@ -133,6 +138,15 @@ a
         img
           height: 300px
           width: 615px
+    #footer
+      width: 60%
+      margin: 0 0 2em 14em
+      position: absolute
+      bottom: 0
+      a
+        margin: 2px 2px 0 2px
+        text-decoration: none
+        color: black
   #content
     background-color: #000000
     border: 1px solid black
