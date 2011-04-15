@@ -28,7 +28,7 @@ describe SessionsController do
   describe "show" do
     it "should provide all the restaurants" do
       @controller.stubs(:current_user).returns(User.first)
-      Restaurant.stub(:find).and_return([Restaurant.new(:name => "Awesome")])
+      Restaurant.stub(:find).and_return([Restaurant.new(:name => "Awesome", :photo => "/images/first_restaurant.jpg", :logo => "/images/logo.gif", :offer => "Enjoy 30% off on your total bill", :location => "Some cool neighbourhood", :cuisine => "Italian", :offer_end_date => "2011-05-15", :offer_valid_days => "Saturday and Sunday", :offer_valid_times => "Between 12 pm and 10 pm", :address => "Some street, some city", :phone => "1234567890")])
       get :show
       assigns[:restaurants].first.name.should == "Awesome"
     end
