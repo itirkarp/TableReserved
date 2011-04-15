@@ -22,5 +22,6 @@ class SessionsController < ApplicationController
   end
 
   def show
+    @restaurants = Restaurant.find(:all)
   end
 end

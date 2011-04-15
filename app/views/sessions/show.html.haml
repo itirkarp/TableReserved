@@ -37,8 +37,7 @@
         %li.ui-tabs-selected
           %a{:href=>"#tabs-1"} Exclusive Offers
     #tabs-1
-      = render "shared/restaurant"
-      = render "shared/restaurant"
+      = render :partial => "shared/restaurant", :collection => @restaurants
     #tabs-2
       This is how we do it
     #tabs-3

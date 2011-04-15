@@ -1,26 +1,26 @@
 = form_tag "#" do
   #restaurant
     #heading
-      = hidden_field_tag "restaurant_id", 1
+      = hidden_field_tag "restaurant_id", restaurant.id
       %p.restaurant-name
-        An Awesome Restaurant
+        = restaurant.name
       = submit_tag "Get Offer", :class => 'primary-button'
       %p.description
-        Enjoy 30% off on your total bill
+        = restaurant.offer
     #photo
-      = image_tag "/images/first_restaurant.jpg"
+      = image_tag restaurant.photo
     #information
       %p
-        = image_tag "/images/logo.gif"
+        = image_tag restaurant.logo
       %p.fields
         Location
       %p
-        Some cool neighbourhood
+        = restaurant.location
       %p.fields
         Cuisine
       %p
-        Italian
+        = restaurant.cuisine
       %p.fields
         Offer Valid
       %p
-        Till 30th April, on Saturday and Sunday
+        = offer_validity(restaurant)
