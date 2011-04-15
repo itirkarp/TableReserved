@@ -1,3 +1,150 @@
+#header {
+  background-color: #11083a;
+  height: 6em; }
+  #header #logo {
+    width: 12%;
+    float: left;
+    margin: 7px 0 0 252px; }
+    #header #logo img {
+      width: 132px; }
+  #header #seperator {
+    float: left;
+    background: url("../../images/separator.png") repeat-y;
+    height: 43px;
+    width: 1px;
+    margin-top: 18px;
+    opacity: 0.6; }
+  #header #city {
+    margin: 23px 0 0 60px;
+    float: left;
+    font-size: 2.2em;
+    color: white;
+    font-family: Courier New; }
+  #header #arrow {
+    float: left;
+    position: relative;
+    z-index: 900; }
+    #header #arrow img {
+      width: 20px;
+      margin: 29px 0 0 15px;
+      cursor: pointer; }
+    #header #arrow #cities {
+      position: absolute;
+      background-color: #11083a;
+      z-index: 999;
+      margin-left: -9.5em;
+      width: 13em; }
+      #header #arrow #cities ul {
+        list-style: none;
+        padding-left: 0; }
+        #header #arrow #cities ul li {
+          font-family: Courier New;
+          padding: 0.4em 0 0.3em 1.5em; }
+          #header #arrow #cities ul li:hover {
+            background-color: #1d1d51; }
+          #header #arrow #cities ul li a {
+            color: lightGrey;
+            text-decoration: none;
+            display: block; }
+  #header #access-links {
+    float: right;
+    margin-right: 17em; }
+    #header #access-links a {
+      margin: 29px 23px 0 23px;
+      float: right;
+      text-decoration: none;
+      color: white; }
+    #header #access-links #seperator {
+      float: right;
+      background: url("../../images/separator.png") repeat-y;
+      height: 20px;
+      width: 1px;
+      opacity: 0.6;
+      margin-top: 2em; }
+
+#content {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  opacity: 0.8;
+  padding: 20px 40px 20px 70px;
+  height: 575px;
+  left: 50%;
+  top: 50%;
+  margin: -350px 0 0 -370px;
+  position: absolute;
+  width: 680px;
+  text-align: left; }
+  #content .field {
+    width: 175px; }
+  #content .name-field {
+    width: 110px; }
+  #content a {
+    color: white; }
+  #content h2 {
+    color: #1874cd;
+    margin-bottom: 8px; }
+  #content #button {
+    opacity: 1; }
+  #content #logo-container {
+    width: 27%;
+    float: left; }
+  #content #slogan {
+    font-size: 23px;
+    width: 68%;
+    float: right; }
+  #content #description {
+    clear: both;
+    font-size: 1.3em;
+    margin: -34px 0 10px 56px;
+    float: right;
+    font-style: italic; }
+  #content #separator {
+    float: left;
+    width: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 455px;
+    background: url("../../images/separator.png") repeat-y;
+    margin-left: 42px; }
+  #content #login {
+    clear: both;
+    float: left;
+    width: 270px; }
+    #content #login .field {
+      width: 175px; }
+  #content #signup {
+    float: right;
+    width: 280px;
+    height: 430px; }
+    #content #signup #first-name {
+      float: left; }
+    #content #signup #last-name {
+      float: left;
+      margin-left: 20px; }
+    #content #signup #fields {
+      clear: both;
+      padding-top: 10px; }
+    #content #signup #error_messages {
+      margin: 8px 0 8px 0; }
+    #content #signup a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #1874cd; }
+  #content #footer {
+    clear: both;
+    float: left;
+    margin-top: 10px; }
+    #content #footer a {
+      margin: 2px 2px 0 2px;
+      text-decoration: none; }
+  #content #copyright {
+    clear: both;
+    font-size: 9px;
+    width: 35%;
+    margin-left: 192px;
+    padding-top: 10px; }
+
 body {
   background-image: url("../../images/restaurant.jpg");
   -webkit-background-size: cover;
@@ -15,69 +162,6 @@ a {
 
 #container {
   height: 100%; }
-  #container #header {
-    background-color: #11083a;
-    height: 6em; }
-    #container #header #logo {
-      width: 12%;
-      float: left;
-      margin: 7px 0 0 252px; }
-      #container #header #logo img {
-        width: 132px; }
-    #container #header #seperator {
-      float: left;
-      background: url("../../images/separator.png") repeat-y;
-      height: 43px;
-      width: 1px;
-      margin-top: 18px;
-      opacity: 0.6; }
-    #container #header #city {
-      margin: 23px 0 0 60px;
-      float: left;
-      font-size: 2.2em;
-      color: white;
-      font-family: Courier New; }
-    #container #header #arrow {
-      float: left;
-      position: relative;
-      z-index: 900; }
-      #container #header #arrow img {
-        width: 20px;
-        margin: 29px 0 0 15px;
-        cursor: pointer; }
-      #container #header #arrow #cities {
-        position: absolute;
-        background-color: #11083a;
-        z-index: 999;
-        margin-left: -9.5em;
-        width: 13em; }
-        #container #header #arrow #cities ul {
-          list-style: none;
-          padding-left: 0; }
-          #container #header #arrow #cities ul li {
-            font-family: Courier New;
-            padding: 0.4em 0 0.3em 1.5em; }
-            #container #header #arrow #cities ul li:hover {
-              background-color: #1d1d51; }
-            #container #header #arrow #cities ul li a {
-              color: lightGrey;
-              text-decoration: none;
-              display: block; }
-    #container #header #access-links {
-      float: right;
-      margin-right: 17em; }
-      #container #header #access-links a {
-        margin: 29px 23px 0 23px;
-        float: right;
-        text-decoration: none;
-        color: white; }
-      #container #header #access-links #seperator {
-        float: right;
-        background: url("../../images/separator.png") repeat-y;
-        height: 20px;
-        width: 1px;
-        opacity: 0.6;
-        margin-top: 2em; }
   #container #gap {
     height: 0.7em;
     background-color: #4162ad;
@@ -178,88 +262,6 @@ a {
         margin: 2px 2px 0 2px;
         text-decoration: none;
         color: black; }
-  #container #content {
-    background-color: black;
-    border: 1px solid black;
-    color: white;
-    opacity: 0.8;
-    padding: 20px 40px 20px 70px;
-    height: 575px;
-    left: 50%;
-    top: 50%;
-    margin: -350px 0 0 -370px;
-    position: absolute;
-    width: 680px;
-    text-align: left; }
-    #container #content .field {
-      width: 175px; }
-    #container #content .name-field {
-      width: 110px; }
-    #container #content a {
-      color: white; }
-    #container #content h2 {
-      color: #1874cd;
-      margin-bottom: 8px; }
-    #container #content #button {
-      opacity: 1; }
-    #container #content #logo-container {
-      width: 27%;
-      float: left; }
-    #container #content #slogan {
-      font-size: 23px;
-      width: 68%;
-      float: right; }
-    #container #content #description {
-      clear: both;
-      font-size: 1.3em;
-      margin: -34px 0 10px 56px;
-      float: right;
-      font-style: italic; }
-    #container #content #separator {
-      float: left;
-      width: 1px;
-      margin-left: 10px;
-      margin-right: 10px;
-      height: 455px;
-      background: url("../../images/separator.png") repeat-y;
-      margin-left: 42px; }
-    #container #content #login {
-      clear: both;
-      float: left;
-      width: 270px; }
-      #container #content #login .field {
-        width: 175px; }
-    #container #content #signup {
-      float: right;
-      width: 280px;
-      height: 430px; }
-      #container #content #signup #first-name {
-        float: left; }
-      #container #content #signup #last-name {
-        float: left;
-        margin-left: 20px; }
-      #container #content #signup #fields {
-        clear: both;
-        padding-top: 10px; }
-      #container #content #signup #error_messages {
-        margin: 8px 0 8px 0; }
-      #container #content #signup a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #1874cd; }
-    #container #content #footer {
-      clear: both;
-      float: left;
-      margin-top: 10px; }
-      #container #content #footer a {
-        margin: 2px 2px 0 2px;
-        text-decoration: none; }
-    #container #content #copyright {
-      clear: both;
-      font-size: 9px;
-      width: 35%;
-      margin-left: 192px;
-      padding-top: 10px; }
 
 .primary-button {
   height: 26px;

@@ -1,3 +1,6 @@
+@import "_header.sass"
+@import "_login.sass"
+
 body
   background-image: url('../../images/restaurant.jpg')
   -webkit-background-size: cover
@@ -21,69 +24,7 @@ a
 
 #container
   height: 100%
-  #header
-    background-color: #11083A
-    height: 6em
-    #logo
-      width: 12%
-      float: left
-      margin: 7px 0 0 252px
-      img
-        width: 132px
-    #seperator
-      float: left
-      background: url('../../images/separator.png') repeat-y
-      height: 43px
-      width: 1px
-      margin-top: 18px
-      opacity: 0.6
-    #city
-      margin: 23px 0 0 60px
-      float: left
-      font-size: 2.2em
-      color: white
-      font-family: Courier New
-    #arrow
-      float: left
-      position: relative
-      z-index: 900
-      img
-        width: 20px
-        margin: 29px 0 0 15px
-        cursor: pointer
-      #cities
-        position: absolute
-        background-color: #11083A
-        z-index: 999
-        margin-left: -9.5em
-        width: 13em
-        ul
-          list-style: none
-          padding-left: 0
-          li
-            font-family: Courier New
-            padding: 0.4em 0 0.3em 1.5em
-            &:hover
-              background-color: #1D1D51
-            a
-              color: lightGrey
-              text-decoration: none
-              display: block
-    #access-links
-      float: right
-      margin-right: 17em
-      a
-        margin: 29px 23px 0 23px
-        float: right
-        text-decoration: none
-        color: white
-      #seperator
-        float: right
-        background: url('../../images/separator.png') repeat-y
-        height: 20px
-        width: 1px
-        opacity: 0.6
-        margin-top: 2em
+  +header
   #gap
     height: 0.7em
     background-color: #4162AD
@@ -190,89 +131,7 @@ a
         margin: 2px 2px 0 2px
         text-decoration: none
         color: black
-  #content
-    background-color: #000000
-    border: 1px solid black
-    color: #FFFFFF
-    opacity: 0.8
-    padding: 20px 40px 20px 70px
-    height: 575px
-    left: 50%
-    top: 50%
-    margin: -350px 0 0 -370px
-    position: absolute
-    width: 680px
-    text-align: left
-    .field
-      width: 175px
-    .name-field
-      width: 110px
-    a
-      color: white
-    h2
-      color: #1874CD
-      margin-bottom: 8px
-    #button
-      opacity: 1
-    #logo-container
-      width: 27%
-      float: left
-    #slogan
-      font-size: 23px
-      width: 68%
-      float: right
-    #description
-      clear: both
-      font-size: 1.3em
-      margin: -34px 0 10px 56px
-      float: right
-      font-style: italic
-    #separator
-      float: left
-      width: 1px
-      margin-left: 10px
-      margin-right: 10px
-      height: 455px
-      background: url('../../images/separator.png') repeat-y
-      margin-left: 42px
-    #login
-      clear: both
-      float: left
-      width: 270px
-      //height: 430px
-      .field
-        width: 175px
-    #signup
-      float: right
-      width: 280px
-      height: 430px
-      #first-name
-        float: left
-      #last-name
-        float: left
-        margin-left: 20px
-      #fields
-        clear: both
-        padding-top: 10px
-      #error_messages
-        margin: 8px 0 8px 0
-      a
-        text-decoration: none
-        font-weight: bold
-        color: #1874CD
-    #footer
-      clear: both
-      float: left
-      margin-top: 10px
-      a
-        margin: 2px 2px 0 2px
-        text-decoration: none
-    #copyright
-      clear: both
-      font-size: 9px
-      width: 35%
-      margin-left: 192px
-      padding-top: 10px
+  +login
 
 
 .primary-button
