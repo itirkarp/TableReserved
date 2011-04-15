@@ -1,0 +1,24 @@
+#header
+  #logo
+    = image_tag "reserved.jpg"
+  #seperator
+  #city CHICAGO
+  #arrow
+    = image_tag "/images/arrow_small.jpeg"
+    #cities.hidden
+      %ul
+        %li
+          %a{:href=>"#"} Boston
+        %li
+          %a{:href=>"#"} New York
+        %li
+          %a{:href=>"#"} Miami
+        %li
+          %a{:href=>"#"} Miami
+        %li
+          %a{:href=>"#"} Miami
+  #access-links
+    = link_to "Log Out", logout_url
+    #seperator
+    = link_to "My Account", "#"
+#gap
