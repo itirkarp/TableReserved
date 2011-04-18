@@ -158,9 +158,12 @@
       float: left;
       margin-left: 20px; }
     #tabs-1 #columns #left-column #payment-form #fields {
+      clear: both; }
+    #tabs-1 #columns #left-column #billing {
       clear: both;
-      padding-top: 10px; }
+      height: 205px; }
     #tabs-1 #columns #left-column .step {
+      clear: both;
       margin-top: 3.5em; }
     #tabs-1 #columns #left-column .step-heading {
       background: -moz-linear-gradient(center bottom, #f7f7f7 1pt, #f0ffff 100%) repeat scroll 0 0 transparent;

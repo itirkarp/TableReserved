@@ -1,44 +1,58 @@
 #payment-form
   = form_tag '#' do
-    #left-field
-      = label_tag :first_name, "Cardholder's first name"
-      %br
-      = text_field_tag :first_name
-    #right-field
-      = label_tag :last_name, "Cardholder's last name"
-      %br
-      = text_field_tag :last_name
-    #left-field
-      = label_tag :street_address, "Street Address"
-      %br
-      = text_field_tag :street_address
-    #right-field
-      = label_tag :street_address_2, "Street Address line 2"
-      %br
-      = text_field_tag :street_address_2
-    #left-field
-      = label_tag :city, "City"
-      %br
-      = text_field_tag :city
-    #right-field
-      = label_tag :state, "State"
-      %br
-      = text_field_tag :state
-    #left-field
-      = label_tag :zip_code, "Zip Code"
-      %br
-      = text_field_tag :zip_code
-    #fields
-      %p
-        = label_tag :card_number, "Card Number"
+    #credit-card
+      %h3 Credit Card Information
+      #left-field
+        = label_tag :first_name, "Cardholder's first name"
         %br
-        = text_field_tag :card_number
-      %p
-        = label_tag :expiration_date, "Expiration Date"
+        = text_field_tag :first_name
+      #right-field
+        = label_tag :last_name, "Cardholder's last name"
         %br
-        = select_tag :expiration_date
-      %p
-        = label_tag :security_code, "Security Code"
-        %br
-        = text_field_tag :security_code
+        = text_field_tag :last_name
+      #left-field
+        %p
+          = label_tag :card_number, "Card Number"
+          %br
+          = text_field_tag :card_number
+      #right-field
+        %p
+          = label_tag :security_code, "Security Code"
+          %br
+          = text_field_tag :security_code
+      #left-field
+        %p
+          = label_tag :expiration_month, "Expiration Month"
+          %br
+          = select_tag :expiration_month, options_for_select(1..12)
+      #right-field
+        %p
+          = label_tag :expiration_year, "Expiration Year"
+          %br
+          = select_tag :expiration_year, options_for_select(2011..2021)
 
+    #billing
+      %h3 Billing Information
+      #left-field
+        = label_tag :street_address, "Street Address"
+        %br
+        = text_field_tag :street_address
+      #right-field
+        = label_tag :street_address_2, "Street Address line 2"
+        %br
+        = text_field_tag :street_address_2
+      #left-field
+        %p
+        = label_tag :city, "City"
+        %br
+        = text_field_tag :city
+      #right-field
+        %p
+        = label_tag :state, "State"
+        %br
+        = text_field_tag :state
+      #left-field
+        %p
+        = label_tag :zip_code, "Zip Code"
+        %br
+        = text_field_tag :zip_code
