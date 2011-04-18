@@ -6,6 +6,8 @@ class UsersController < ApplicationController
   end
 
   def create
+    terms = params[:terms].nil? ? "0" : "1"
+    params[:user].merge!({:terms => terms})
     @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
