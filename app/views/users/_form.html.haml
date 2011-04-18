@@ -9,13 +9,12 @@
     = f.text_field :last_name, :class => 'name-field'
     %br
   #fields
-    = f.label :email, "Email Address"
-    = f.error_messages.first[:email].first
+    = f.error_messages.first[:first_name].first ? f.error_messages.first[:first_name].first : f.error_messages.first[:last_name].first
+    = f.label :email, "Email Address #{f.error_messages.first[:email].first}"
     %br
     = f.text_field :email, :class => 'field'
   %p
-    = f.label :password
-    = f.error_messages.first[:password].first
+    = f.label :password, "Password #{f.error_messages.first[:password].first}"
     %br
     = f.password_field :password, :class => 'field'
   %p
@@ -23,8 +22,7 @@
     %br
     = f.password_field :password_confirmation, :class => 'field'
   %p
-    = f.label :zip_code, "Zip Code"
-    = f.error_messages.first[:zip_code].first
+    = f.label :zip_code, "Zip Code #{f.error_messages.first[:zip_code].first}"
     %br
     = f.text_field :zip_code, :class => 'field'
   %p

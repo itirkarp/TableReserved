@@ -3,6 +3,7 @@ module ErrorMessagesHelper
   def error_messages_for(*objects)
     objects.extract_options!
     messages = objects.collect { |o| o.errors}
+    p messages
     messages
   end
 

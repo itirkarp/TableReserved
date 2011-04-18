@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email, :allow_blank => true
   validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
   validates_presence_of :password, :zip_code, :on => :create
+  validates_presence_of :first_name, :last_name, :on => :create, :message => "First name and last name can't be blank"
   validates_confirmation_of :password
   validates_length_of :password, :minimum => 6, :allow_blank => true
   validates_acceptance_of :terms, :on => :create, :message => "Terms must be accepted"
