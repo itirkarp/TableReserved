@@ -1,12 +1,41 @@
 - javascript("sessions/show")
 
+= content_for :title, @restaurant.name
+
 = render "shared/header"
 
 #page
   #tabs
     = render "shared/tabs"
     #tabs-1
-      Some more stuff about a restaurant
+      #columns
+        #left-column
+          #step-1.step
+            %div.step-heading
+              %span.step-number Step 1 :
+              %span.heading Review Availability
+            %div.step-content
+              These are the dates and times that this offer is valid
+              %p
+                Dates : Till
+                = @restaurant.offer_end_date.strftime('%B %e, %Y')
+              %p
+                Days : Valid on
+                = @restaurant.offer_valid_days
+              %p
+                Time :
+                = @restaurant.offer_valid_times
+          #step-2.step
+            %div.step-heading
+              %span.step-number Step 2 :
+              %span.heading Purchase Reservation Code
+            = render "payment_form"
+          #step-3.step
+            %div.step-heading
+              %span.step-number Step 3 :
+              %span.heading Make Reservation
+        #right-column
+          right content
     #tabs-2
       This is how we do it
     #tabs-3

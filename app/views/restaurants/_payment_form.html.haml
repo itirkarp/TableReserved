@@ -1,0 +1,44 @@
+#payment-form
+  = form_tag '#' do
+    #left-field
+      = label_tag :first_name, "Cardholder's first name"
+      %br
+      = text_field_tag :first_name
+    #right-field
+      = label_tag :last_name, "Cardholder's last name"
+      %br
+      = text_field_tag :last_name
+    #left-field
+      = label_tag :street_address, "Street Address"
+      %br
+      = text_field_tag :street_address
+    #right-field
+      = label_tag :street_address_2, "Street Address line 2"
+      %br
+      = text_field_tag :street_address_2
+    #left-field
+      = label_tag :city, "City"
+      %br
+      = text_field_tag :city
+    #right-field
+      = label_tag :state, "State"
+      %br
+      = text_field_tag :state
+    #left-field
+      = label_tag :zip_code, "Zip Code"
+      %br
+      = text_field_tag :zip_code
+    #fields
+      %p
+        = label_tag :card_number, "Card Number"
+        %br
+        = text_field_tag :card_number
+      %p
+        = label_tag :expiration_date, "Expiration Date"
+        %br
+        = select_tag :expiration_date
+      %p
+        = label_tag :security_code, "Security Code"
+        %br
+        = text_field_tag :security_code
+
