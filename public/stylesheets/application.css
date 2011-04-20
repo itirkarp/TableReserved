@@ -304,7 +304,11 @@ a {
   -moz-border-radius: 6px 6px 6px 6px;
   background-color: #6495ed;
   border: 1px solid #6495ed;
-  -webkit-border-radius: 8px; }
+  -webkit-border-radius: 8px;
+  -moz-box-shadow: 1px 1px 1.5px #11083a;
+  -webkit-box-shadow: 1px 1px 1.5px #11083a;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#11083A')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#11083A'); }
 
 .less-dull {
   opacity: 0.7; }
