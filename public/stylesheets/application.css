@@ -4,7 +4,7 @@
   #header #logo {
     width: 12%;
     float: left;
-    margin: 7px 0 0 252px; }
+    margin: 7px 0 0 11%; }
     #header #logo img {
       width: 132px; }
   #header #seperator {
@@ -48,7 +48,7 @@
             display: block; }
   #header #access-links {
     float: right;
-    margin-right: 17em; }
+    margin-right: 9%; }
     #header #access-links a {
       margin: 29px 23px 0 23px;
       float: right;
