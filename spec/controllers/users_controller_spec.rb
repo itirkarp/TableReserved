@@ -16,7 +16,7 @@ describe UsersController do
   describe "create" do
     it "should render new template when model is invalid" do
       User.any_instance.stubs(:valid?).returns(false)
-      post :create
+      post :create, :terms => "1"
       response.should render_template(:new)
     end
 

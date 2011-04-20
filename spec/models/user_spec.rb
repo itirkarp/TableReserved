@@ -3,6 +3,9 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe User do
   def new_user(attributes = {})
     attributes[:email] ||= 'foo@example.com'
+    attributes[:zip_code] ||= '12345'
+    attributes[:first_name] ||= 'foo'
+    attributes[:last_name] ||= 'bar'
     attributes[:password] ||= 'abc123'
     attributes[:password_confirmation] ||= attributes[:password]
     User.new(attributes)
