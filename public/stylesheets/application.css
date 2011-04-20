@@ -185,11 +185,7 @@
     margin-left: 5%; }
 
 body {
-  background-image: url("../../images/restaurant.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: lightSteelBlue;
   height: 1100px;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
@@ -209,7 +205,7 @@ a {
     height: 100%;
     width: 970px;
     margin: 0 auto;
-    background-color: #f0ffff;
+    background-color: #e8f0f7;
     position: relative; }
     #container #page #tabs {
       float: left;
@@ -258,8 +254,8 @@ a {
             float: left;
             padding: 0 0 0.5em 1em;
             height: 4.5;
-            background: -moz-linear-gradient(center bottom, #f7f7f7 10pt, #f0ffff 100%) repeat scroll 0 0 transparent;
-            background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #f0ffff)); }
+            background: -moz-linear-gradient(center bottom, #f7f7f7 10pt, #e8f0f7 100%) repeat scroll 0 0 transparent;
+            background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #e8f0f7 n)); }
             #container #page #tabs #tabs-1 #restaurant-box #heading p {
               margin: 0 0;
               float: left; }
@@ -328,3 +324,10 @@ a {
 .restaurant-name {
   font-size: 1.5em;
   width: 36em; }
+
+.login-photo {
+  background-image: url("../../images/restaurant.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
