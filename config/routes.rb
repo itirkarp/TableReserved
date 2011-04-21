@@ -15,6 +15,8 @@ TableReservation::Application.routes.draw do
 
   match 'restaurants/:id' => 'restaurants#show', :via => [:post]
 
+  match 'admin' => 'admin#show', :as => :admin
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
