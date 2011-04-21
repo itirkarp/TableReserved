@@ -31,10 +31,10 @@
               %span.heading Purchase Reservation Code
             = render "payment_form"
           #step-3.step
-            %div.step-heading
+            .step-heading
               %span.step-number Step 3 :
               %span.heading Make Reservation
-            %div.step-content
+            .step-content
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a nibh in tellus tincidunt dignissim quis facilisis sem. Vivamus a dolor risus. Aliquam laoreet suscipit purus, et semper augue porttitor non.
         #right-column
           .step
@@ -55,11 +55,13 @@
             %br
             %span
               = link_to "#{@restaurant.website}", @restaurant.website
-            .step
-              .step-heading
-                %span.heading
-                  Reviews
-              .step-content
+          .step
+            .step-heading
+              %span.heading
+                Reviews
+            .step-content
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a nibh in tellus tincidunt dignissim quis facilisis sem. Vivamus a dolor risus. Aliquam laoreet suscipit purus, et semper augue porttitor non.
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a nibh in tellus tincidunt dignissim quis facilisis sem. Vivamus a dolor risus. Aliquam laoreet suscipit purus, et semper augue porttitor non.
     #tabs-2
       This is how we do it
     #tabs-3
