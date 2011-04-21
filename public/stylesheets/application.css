@@ -162,27 +162,36 @@
     #tabs-1 #columns #left-column #billing {
       clear: both;
       height: 205px; }
-    #tabs-1 #columns #left-column .step {
-      clear: both;
-      margin-top: 3.5em; }
-    #tabs-1 #columns #left-column .step-heading {
-      background: -moz-linear-gradient(center bottom, #f7f7f7 1pt, #f0ffff 100%) repeat scroll 0 0 transparent;
-      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #f0ffff));
-      border-bottom: 1px solid #c1cdcd; }
-    #tabs-1 #columns #left-column .step-content {
-      margin: 1em 0 0 1em;
-      font-size: 1.1em; }
-    #tabs-1 #columns #left-column .step-number {
-      font-size: 2em;
-      color: #183787; }
-    #tabs-1 #columns #left-column .heading {
-      font-size: 1.5em;
-      margin-left: 1em;
-      color: #1874cd; }
+  #tabs-1 #columns .step {
+    clear: both;
+    margin-top: 3.5em; }
+  #tabs-1 #columns .step-heading {
+    background: -moz-linear-gradient(center bottom, #f7f7f7 1pt, #e8f0f7 100%) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #e8f0f7));
+    border-bottom: 1px solid #c1cdcd; }
+  #tabs-1 #columns .step-content {
+    margin: 1em 0 0 1em;
+    font-size: 1.1em; }
+  #tabs-1 #columns .step-number {
+    font-size: 2em;
+    color: #183787; }
+  #tabs-1 #columns .heading {
+    font-size: 1.5em;
+    margin-left: 1em;
+    color: #1874cd; }
   #tabs-1 #columns #right-column {
     float: right;
     width: 45%;
-    margin-left: 5%; }
+    margin-left: 5%;
+    margin-top: 8px; }
+    #tabs-1 #columns #right-column img {
+      width: 415px; }
+    #tabs-1 #columns #right-column .information {
+      margin: 1em 0 0 2em;
+      line-height: 30px; }
+      #tabs-1 #columns #right-column .information .fields {
+        font-weight: bold;
+        margin-top: 0.5em; }
 
 body {
   background-color: lightSteelBlue;
@@ -292,8 +301,8 @@ a {
         float: left;
         margin: 9em 0 0 2em; }
     #container #page #footer {
-      width: 60%;
-      margin: 0 0 2em 14em;
+      width: 70%;
+      margin: 0 0 2em 11em;
       position: absolute;
       bottom: 0; }
       #container #page #footer a {
@@ -304,6 +313,7 @@ a {
 .primary-button {
   height: 26px;
   -moz-border-radius: 6px 6px 6px 6px;
+  font-size: 14px;
   background-color: #6495ed;
   border: 1px solid #6495ed;
   -webkit-border-radius: 8px;
