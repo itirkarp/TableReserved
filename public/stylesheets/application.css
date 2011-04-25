@@ -149,8 +149,10 @@
   width: 100%; }
   #tabs-1 #columns #left-column {
     float: left;
-    width: 48%;
+    width: 49%;
     margin-left: 2%; }
+    #tabs-1 #columns #left-column #payment-form .lock {
+      margin-left: 5px; }
     #tabs-1 #columns #left-column #payment-form #left-field {
       clear: both;
       float: left; }
@@ -177,11 +179,11 @@
     color: #183787; }
   #tabs-1 #columns .heading {
     font-size: 1.5em;
-    margin-left: 1em;
+    margin-left: 5px;
     color: #1874cd; }
   #tabs-1 #columns #right-column {
     float: right;
-    width: 45%;
+    width: 44%;
     margin-left: 5%;
     margin-top: 8px; }
     #tabs-1 #columns #right-column img {

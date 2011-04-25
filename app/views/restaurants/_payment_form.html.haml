@@ -1,7 +1,10 @@
 #payment-form
   = form_tag '#' do
     #credit-card
-      %h3 Credit Card Information
+      %h3
+        %span Credit Card Information
+        %span.lock
+          = image_tag "lock.jpg"
       #left-field
         = label_tag :first_name, "Cardholder's first name"
         %br
@@ -38,21 +41,28 @@
         %br
         = text_field_tag :street_address
       #right-field
-        = label_tag :street_address_2, "Street Address line 2"
+        = label_tag :phone, "Phone Number"
+        %br
+        = text_field_tag :phone
+      #left-field
+        %p
+        = label_tag :street_address_2, "Street Address Line 2"
         %br
         = text_field_tag :street_address_2
-      #left-field
+      #right-field
         %p
         = label_tag :city, "City"
         %br
         = text_field_tag :city
-      #right-field
+      #left-field
         %p
         = label_tag :state, "State"
         %br
         = text_field_tag :state
-      #left-field
+      #right-field
         %p
         = label_tag :zip_code, "Zip Code"
         %br
         = text_field_tag :zip_code
+    %br
+    = submit_tag "Purchase Code", :class => 'primary-button'
