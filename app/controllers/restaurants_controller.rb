@@ -14,12 +14,12 @@ class RestaurantsController < ApplicationController
 
     photo = params[:restaurant][:photo]
     path = File.join("public/images", photo.original_filename)
-    File.open(path, "wb") {|f| f.write(photo.read)}
+#    File.open(path, "wb") {|f| f.write(photo.read)}
     params[:restaurant][:photo] = photo.original_filename
 
     photo = params[:restaurant][:logo]
     path = File.join("public/images", photo.original_filename)
-    File.open(path, "wb") {|f| f.write(photo.read)}
+#    File.open(path, "wb") {|f| f.write(photo.read)}
     params[:restaurant][:logo] = photo.original_filename
 
     restaurant = Restaurant.new(params[:restaurant])
