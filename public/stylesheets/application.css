@@ -197,6 +197,17 @@
         font-weight: bold;
         margin-top: 0.5em; }
 
+#restaurant-form {
+  padding: 15px 0 0 20px; }
+  #restaurant-form #left-field {
+    clear: both;
+    float: left; }
+  #restaurant-form #right-field {
+    float: left;
+    margin-left: 20px; }
+  #restaurant-form #fields {
+    clear: both; }
+
 body {
   background-color: lightSteelBlue;
   height: 1100px;
