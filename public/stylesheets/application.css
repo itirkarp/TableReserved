@@ -153,6 +153,8 @@
     margin-left: 2%; }
     #tabs-1 #columns #left-column #payment-form .lock {
       margin-left: 5px; }
+    #tabs-1 #columns #left-column #payment-form .credit-cards {
+      margin-left: 5px; }
     #tabs-1 #columns #left-column #payment-form #left-field {
       clear: both;
       float: left; }
