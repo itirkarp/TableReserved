@@ -35,6 +35,13 @@ module ControllerAuthentication
     end
   end
 
+  def admin_login
+    unless current_user.admin?
+      store_target_location
+      redirect_to root_url
+    end
+  end
+
   def redirect_to_target_or_default(default, *args)
     redirect_to(session[:return_to] || default, *args)
     session[:return_to] = nil

@@ -22,6 +22,10 @@ class User < ActiveRecord::Base
     BCrypt::Engine.hash_secret(pass, password_salt)
   end
 
+  def admin?
+    email == 'admin@tablereserved.com'
+  end
+
   private
 
   def prepare_password

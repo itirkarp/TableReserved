@@ -66,4 +66,18 @@ describe User do
 
   end
 
+  describe "admin?" do
+    it "should return true for an admin user" do
+      user = new_user(:email => 'admin@tablereserved.com')
+      user.admin?.should == true
+    end
+
+    it "should return false for a non admin user" do
+      user = new_user(:email => 'otheruser@tablereserved.com')
+      user.admin?.should == false
+    end
+
+  end
+
+
 end
