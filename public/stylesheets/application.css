@@ -191,7 +191,7 @@
     margin-left: 5%;
     margin-top: 8px; }
     #tabs-1 #columns #right-column img {
-      width: 415px; }
+      width: 410px; }
     #tabs-1 #columns #right-column .information {
       margin: 1em 0 0 2em;
       line-height: 30px; }
@@ -209,10 +209,12 @@
     margin-left: 20px; }
   #restaurant-form #fields {
     clear: both; }
+  #restaurant-form .primary-button {
+    margin-top: 15px; }
 
 body {
   background-color: lightSteelBlue;
-  height: 1335px;
+  height: 3000px;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 

@@ -4,8 +4,9 @@
 
 #page
   #restaurant-form
+    = flash[:notice]
     %h3 Add a new restaurant
-    = form_for @restaurant do |f|
+    = form_for(@restaurant, :html => {:multipart => true}) do |f|
       #left-field
         = f.label :name, "Name"
         %br
@@ -62,3 +63,4 @@
         = f.label :offer_end_date, "Validity date (mm/dd/yyyy)"
         %br
         = f.text_field :offer_end_date, :maxlength => 10
+      = submit_tag "Add Restaurant", :class => 'primary-button'

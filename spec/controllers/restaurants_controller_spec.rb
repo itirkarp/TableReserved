@@ -12,4 +12,8 @@ describe RestaurantsController do
       assigns[:restaurant].name.should == "Awesome"
     end
   end
+
+  describe "create" do
+    it "should save the restaurant and redirect"
+  end
 end
