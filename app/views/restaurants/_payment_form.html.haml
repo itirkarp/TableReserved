@@ -66,5 +66,7 @@
         = label_tag :zip_code, "Zip Code"
         %br
         = text_field_tag :zip_code
-    %br
-    = submit_tag "Purchase Code", :class => 'primary-button'
+    %p.charge
+      Total Charge for Reservation Code:  $5
+    %p
+      = submit_tag "Purchase Code", :class => 'primary-button'

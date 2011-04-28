@@ -12,9 +12,7 @@
   #login.less-dull
     %h2 Member Sign in
 
-    - if flash[:alert]
-      .flash-error
-        = flash[:alert]
+    You must sign in or become a member to view our exclusive offers.
 
     = form_tag sessions_path do
       %p
