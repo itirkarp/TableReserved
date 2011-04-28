@@ -6,13 +6,15 @@
   #logo-container
     = image_tag "reserved_black.jpg", :class => 'logo'
   #slogan
-    Exclusive Pricing at the Finest Restaurants
-  #description
-    Join Now to View the Exclusive Offers
+    Exclusive Discounts at the Finest Restaurants
   #login.less-dull
     %h2 Member Sign in
 
     You must sign in or become a member to view our exclusive offers.
+    %p
+      - if flash[:alert]
+        .flash-error
+          = flash[:alert]
 
     = form_tag sessions_path do
       %p

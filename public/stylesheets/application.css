@@ -91,14 +91,8 @@
     float: left; }
   #content #slogan {
     font-size: 23px;
-    width: 68%;
+    width: 70%;
     float: right; }
-  #content #description {
-    clear: both;
-    font-size: 1.3em;
-    margin: -34px 0 10px 56px;
-    float: right;
-    font-style: italic; }
   #content #separator {
     float: left;
     width: 1px;
@@ -165,9 +159,13 @@
       margin-left: 20px; }
     #tabs-1 #columns #left-column #payment-form #fields {
       clear: both; }
+    #tabs-1 #columns #left-column #credit-card input {
+      width: 150px; }
     #tabs-1 #columns #left-column #billing {
       clear: both;
       height: 205px; }
+      #tabs-1 #columns #left-column #billing input {
+        width: 150px; }
     #tabs-1 #columns #left-column .charge {
       font-weight: bold; }
   #tabs-1 #columns .step {
@@ -343,7 +341,8 @@ a {
   -moz-box-shadow: 1px 1px 1.5px #11083a;
   -webkit-box-shadow: 1px 1px 1.5px #11083a;
   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#11083A')";
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#11083A'); }
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#11083A');
+  cursor: pointer; }
 
 .less-dull {
   opacity: 0.7; }
@@ -371,3 +370,6 @@ a {
   -o-background-size: cover;
   background-size: cover;
   height: 100%; }
+
+.flash-error {
+  color: red; }

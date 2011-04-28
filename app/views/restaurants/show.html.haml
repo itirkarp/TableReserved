@@ -18,7 +18,7 @@
               %p
                 = "Discount :  #{@restaurant.offer}% off your entire purchase"
               %p
-                Dates : Till
+                Dates : Through
                 = @restaurant.offer_end_date.strftime('%B %e, %Y')
               %p
                 Days : Valid on
@@ -29,12 +29,12 @@
           #step-2.step
             %div.step-heading
               %span.step-number Step 2 :
-              %span.heading Purchase Reservation Code for $5
+              %span.heading Purchase Reservation Code
             = render "payment_form"
           #step-3.step
             .step-heading
               %span.step-number Step 3 :
-              %span.heading Make Reservation and Enjoy Savings
+              %span.heading Make Reservation
             .step-content
               %p After clicking the purchase code button above a unique reservation code will be sent to you in email.  Simply call the restaurant and book your reservation using this code.  When you arrive at the restaurant remind the host that you made your reservation using TableReserved and your discount will be automatically applied to your total bill.  There is no need to bring any printout or code to the restaurant.  The process is simple and discreet.
               %p

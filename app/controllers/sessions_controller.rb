@@ -22,6 +22,6 @@ class SessionsController < ApplicationController
   end
 
   def show
-    @restaurants = Restaurant.find(:all)
+    @restaurants = Restaurant.find(:all).shuffle!
   end
 end
