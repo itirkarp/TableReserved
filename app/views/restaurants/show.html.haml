@@ -15,7 +15,8 @@
               %span.step-number Step 1 :
               %span.heading Review Availability
             %div.step-content
-              30% off your total bill is valid.
+              %p
+                = "Discount :  #{@restaurant.offer}% off your entire purchase"
               %p
                 Dates : Till
                 = @restaurant.offer_end_date.strftime('%B %e, %Y')
