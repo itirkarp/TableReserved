@@ -10,13 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110428175454) do
+ActiveRecord::Schema.define(:version => 20110428184015) do
 
   create_table "restaurants", :force => true do |t|
     t.string  "name"
     t.string  "photo"
     t.string  "logo"
-    t.integer "offer"
     t.string  "location"
     t.string  "cuisine"
     t.date    "offer_end_date"
@@ -26,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20110428175454) do
     t.string  "phone"
     t.string  "website"
     t.string  "address_line_2"
+    t.integer "offer"
   end
 
   create_table "users", :force => true do |t|
