@@ -35,6 +35,10 @@
           = label_tag :expiration_year, "Expiration Year"
           %br
           = select_tag :expiration_year, options_for_select(2011..2021)
+      #left-field
+        %p
+          = check_box_tag :save_card
+          = label_tag :save_card, "Keep Card on File"
 
     #billing
       %h3 Billing Information

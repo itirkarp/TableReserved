@@ -92,7 +92,8 @@
   #content #slogan {
     font-size: 23px;
     width: 70%;
-    float: right; }
+    float: right;
+    margin-top: 20px; }
   #content #separator {
     float: left;
     width: 1px;
@@ -179,7 +180,7 @@
     margin: 1em 0 0 1em;
     font-size: 1.1em; }
   #tabs-1 #columns .step-number {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #183787; }
   #tabs-1 #columns .heading {
     font-size: 1.5em;
