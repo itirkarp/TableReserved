@@ -27,7 +27,7 @@
         %br
         = password_field_tag :password, nil, :class => 'field'
       %p
-        = check_box_tag :remember
+        = check_box_tag :remember, '1', true
         = label_tag :remember, "Remember Me"
       %p
         = link_to "Forgot your password?", "#"

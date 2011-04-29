@@ -168,7 +168,8 @@
       #tabs-1 #columns #left-column #billing input {
         width: 150px; }
     #tabs-1 #columns #left-column .charge {
-      font-weight: bold; }
+      font-weight: bold;
+      clear: both; }
   #tabs-1 #columns .step {
     clear: both;
     margin-top: 3.5em; }
@@ -213,6 +214,10 @@
     clear: both; }
   #restaurant-form .primary-button {
     margin-top: 15px; }
+
+#restaurants {
+  padding: 15px 0 0 20px;
+  line-height: 25px; }
 
 body {
   background-color: lightSteelBlue;

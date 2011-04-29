@@ -4,6 +4,7 @@ class AdminController < ApplicationController
 
   def show
     @restaurant = Restaurant.new
+    @restaurants = Restaurant.find(:all)
   end
 
 end

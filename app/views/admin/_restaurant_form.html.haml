@@ -1,0 +1,63 @@
+#restaurant-form
+  = flash[:notice]
+  %h3 Add a new restaurant :
+  All fields are mandatory.
+  %p
+    = form_for(@restaurant, :html => {:multipart => true}) do |f|
+      #left-field
+        = f.label :name, "Name"
+        %br
+        = f.text_field :name
+      #right-field
+        = f.label :offer, "Offer"
+        %br
+        = f.text_field :offer
+      %br
+      #left-field
+        = f.label :location, "Location"
+        %br
+        = f.text_field :location
+      #right-field
+        = f.label :cuisine, "Cuisine"
+        %br
+        = f.text_field :cuisine
+      %br
+      #left-field
+        = f.label :address, "Address"
+        %br
+        = f.text_field :address
+      #right-field
+        = f.label :phone, "Phone number"
+        %br
+        = f.text_field :phone
+      %br
+      #left-field
+        = f.label :address_line_2, "Address line 2"
+        %br
+        = f.text_field :address_line_2
+      #right-field
+        = f.label :website, "Website URL"
+        %br
+        = f.text_field :website
+      %br
+      #left-field
+        = f.label :offer_valid_days, "Days on which offer is valid"
+        %br
+        = f.text_field :offer_valid_days
+      #right-field
+        = f.label :offer_valid_times, "Time range in which offer is valid"
+        %br
+        = f.text_field :offer_valid_times
+      #fields
+        = f.label :photo, "Upload photo"
+        %br
+        = f.file_field :photo
+        %br
+        = f.label :logo, "Upload logo"
+        %br
+        = f.file_field :logo
+        %br
+        = f.label :offer_end_date, "Validity date (mm/dd/yyyy)"
+        %br
+        = f.text_field :offer_end_date, :maxlength => 10
+      = submit_tag "Add Restaurant", :class => 'primary-button'

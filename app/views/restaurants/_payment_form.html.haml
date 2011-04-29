@@ -35,10 +35,6 @@
           = label_tag :expiration_year, "Expiration Year"
           %br
           = select_tag :expiration_year, options_for_select(2011..2021)
-      #left-field
-        %p
-          = check_box_tag :save_card
-          = label_tag :save_card, "Keep Card on File"
 
     #billing
       %h3 Billing Information
@@ -70,6 +66,10 @@
         = label_tag :zip_code, "Zip Code"
         %br
         = text_field_tag :zip_code
+      #left-field
+        %p
+          = check_box_tag :save_card, '1', true
+          = label_tag :save_card, "Keep Credit Card on File"
     %p.charge
       Total Charge for Reservation Code:  $5
     %p
