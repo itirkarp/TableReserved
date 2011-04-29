@@ -6,4 +6,5 @@
   = render "restaurant_form"
   #restaurants
     %h3 Existing Restaurants :
-    = render :partial => "restaurant", :collection => @restaurants
+    %table
+      = render :partial => "restaurant", :collection => @restaurants

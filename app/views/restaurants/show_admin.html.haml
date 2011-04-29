@@ -1,0 +1,67 @@
+= content_for :title, @restaurant.name
+
+= render "shared/header"
+
+#page
+  %table
+    %tr
+      %td
+        Name :
+      %td
+        = @restaurant.name
+    %tr
+      %td
+        Location :
+      %td
+        = @restaurant.location
+    %tr
+      %td
+        Cuisine :
+      %td
+        = @restaurant.cuisine
+    %tr
+      %td
+        Offer End Date :
+      %td
+        = @restaurant.offer_end_date
+    %tr
+      %td
+        Valid Days :
+      %td
+        = @restaurant.offer_valid_days
+    %tr
+      %td
+        Valid Times :
+      %td
+        = @restaurant.offer_valid_times
+    %tr
+      %td
+        Address :
+      %td
+        = "#{@restaurant.address}, #{@restaurant.address_line_2}"
+    %tr
+      %td
+        Phone :
+      %td
+        = @restaurant.phone
+    %tr
+      %td
+        Website :
+      %td
+        = @restaurant.website
+    %tr
+      %td
+        Discount :
+      %td
+        = "#{@restaurant.offer}%"
+    %tr
+      %td
+        Photo :
+      %td
+        = image_tag @restaurant.photo, :class => 'photo'
+    %tr
+      %td
+        Logo :
+      %td
+        = image_tag @restaurant.logo, :class => 'logo'
+

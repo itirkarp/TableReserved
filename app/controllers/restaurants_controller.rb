@@ -5,6 +5,10 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find_by_id(params[:id])
   end
 
+  def show_admin
+    @restaurant = Restaurant.find(params[:id])
+  end
+
   def create
 
     # might go wrong with IE coz it includes the entire path of the file being sent, so original_filename will have full path

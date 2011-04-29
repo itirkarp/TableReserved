@@ -1,2 +1,11 @@
-#restaurant
-  = restaurant.name
+%tr
+  %td
+    = restaurant.name
+  %td
+    = link_to "View", restaurant_show_admin_url(restaurant.id)
+  %td
+    = link_to "Edit", '#'
+  %td
+    = link_to 'Remove from Exclusives', '#'
+  %td
+    = link_to 'Delete Forever', '#'

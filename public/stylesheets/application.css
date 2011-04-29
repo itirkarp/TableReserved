@@ -217,7 +217,17 @@
 
 #restaurants {
   padding: 15px 0 0 20px;
-  line-height: 25px; }
+  line-height: 35px; }
+  #restaurants table {
+    border: 1px solid; }
+  #restaurants td {
+    padding: 0 10px; }
+
+.photo {
+  width: 400px; }
+
+.logo {
+  width: 160px; }
 
 body {
   background-color: lightSteelBlue;
