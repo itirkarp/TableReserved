@@ -1,5 +1,8 @@
+require 'fastercsv'
+
 class UsersController < ApplicationController
   before_filter :login_required, :except => [:new, :create]
+  before_filter :admin_login, :only => :show_all_users_csv
 
   def new
     @user = User.new
@@ -33,4 +36,14 @@ class UsersController < ApplicationController
   def show
     @user = current_user
   end
+
+  def all_users_csv
+    users = User.all
+    users_csv = FasterCSV.generate do |csv|
+      csv << ["email", "first_name", "last_name", "zip_code", "created_at"]
+      users.each { |u| csv << [u.email, u.first_name, u.last_name, u.zip_code, u.created_at]}
+    end
+    send_data users_csv, :type => 'test/plain', :filename => 'users.csv', :disposition => 'attachment'
+  end
+
 end

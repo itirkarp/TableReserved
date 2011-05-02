@@ -39,3 +39,4 @@ gem 'rspec-rails', :group => [:development, :test]
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'mocha', :group => :test
 gem 'haml'
+gem 'fastercsv'

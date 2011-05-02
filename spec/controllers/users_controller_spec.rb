@@ -69,4 +69,10 @@ describe UsersController do
     it "should make the user details available" do
     end
   end
+
+  it "should expose all user data as a csv file" do
+    @controller.stubs(:current_user).returns(User.first)
+    get :all_users_csv
+    response.body.include?("foo@example.com").should == true
+  end
 end

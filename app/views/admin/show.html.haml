@@ -8,3 +8,6 @@
     %h3 Existing Restaurants :
     %table
       = render :partial => "restaurant", :collection => @restaurants
+    %h3 User Information :
+    %p
+      = link_to "Download CSV", all_users_csv_url

@@ -9,6 +9,8 @@ TableReservation::Application.routes.draw do
 
   resources :sessions
 
+  match 'all_users_csv' => 'users#all_users_csv', :as => :all_users_csv
+
   resources :users
 
   resources :restaurants
@@ -18,6 +20,7 @@ TableReservation::Application.routes.draw do
   match 'admin' => 'admin#show', :as => :admin
 
   match 'restaurants/show_admin/:id' => 'restaurants#show_admin', :as => :restaurant_show_admin
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
