@@ -10,7 +10,6 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-
     # might go wrong with IE coz it includes the entire path of the file being sent, so original_filename will have full path
     # in this case sanitize the name
 
@@ -32,5 +31,10 @@ class RestaurantsController < ApplicationController
     redirect_to admin_url
   end
 
+  def remove_from_exclusives
+    restaurant = Restaurant.find(params[:id])
+    restaurant.visible = 0
+    restaurant.save
+  end
 
 end

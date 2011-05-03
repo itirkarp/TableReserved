@@ -17,6 +17,8 @@ TableReservation::Application.routes.draw do
 
   match 'restaurants/:id' => 'restaurants#show', :via => [:post]
 
+  match 'remove_from_exclusives/:id' => 'restaurants#remove_from_exclusives', :as => :remove_from_exclusives
+
   match 'admin' => 'admin#show', :as => :admin
 
   match 'restaurants/show_admin/:id' => 'restaurants#show_admin', :as => :restaurant_show_admin
