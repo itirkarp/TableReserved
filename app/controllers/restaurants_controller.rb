@@ -35,6 +35,14 @@ class RestaurantsController < ApplicationController
     restaurant = Restaurant.find(params[:id])
     restaurant.visible = 0
     restaurant.save
+    redirect_to admin_url
+  end
+
+  def add_to_exclusives
+    restaurant = Restaurant.find(params[:id])
+    restaurant.visible = 1
+    restaurant.save
+    redirect_to admin_url
   end
 
 end

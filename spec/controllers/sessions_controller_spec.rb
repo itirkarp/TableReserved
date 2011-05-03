@@ -38,5 +38,15 @@ describe SessionsController do
       get :show
       assigns[:restaurants].first.name.should == "Awesome"
     end
+
+    it "should filter out invisible retaurants" do
+      @controller.stubs(:current_user).returns(User.first)
+      visible = Restaurant.new(:name => 'one', :visible => true)
+      invisible = Restaurant.new(:name => 'two', :visible => false)
+      Restaurant.stub(:find).and_return([visible, invisible])
+      get :show
+      assigns[:restaurants].count.should == 1
+      assigns[:restaurants].first.name.should == visible.name
+    end
   end
 end

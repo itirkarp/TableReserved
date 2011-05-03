@@ -22,6 +22,10 @@ class SessionsController < ApplicationController
   end
 
   def show
-    @restaurants = Restaurant.find(:all).shuffle!
+    @restaurants = remove_invisible(Restaurant.find(:all)).shuffle!
+  end
+
+  def remove_invisible restaurants
+    restaurants.reject{ |r| r.visible != true}
   end
 end
