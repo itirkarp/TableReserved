@@ -36,16 +36,16 @@
         %br
         = f.text_field :address_line_2
       #right-field
-        = f.label :offer_end_date, "Validity date (mm/dd/yyyy)"
+        = f.label :offer_end_date, "Expiration date (mm/dd/yyyy)"
         %br
         = f.text_field :offer_end_date, :maxlength => 10
       %br
       #left-field
-        = f.label :offer_valid_days, "Days on which offer is valid"
+        = f.label :offer_valid_days, "Valid Days"
         %br
         = f.text_field :offer_valid_days
       #right-field
-        = f.label :offer_valid_times, "Time range in which offer is valid"
+        = f.label :offer_valid_times, "Valid Times"
         %br
         = f.text_field :offer_valid_times
       #fields
