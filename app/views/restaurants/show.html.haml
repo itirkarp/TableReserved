@@ -52,16 +52,11 @@
               #photo
               = image_tag @restaurant.photo
           .information
-            %span.fields Address:
-            %span
-              = @restaurant.address
+            = @restaurant.address
             %br
-            %span
-              = @restaurant.address_line_2
+            = @restaurant.address_line_2
             %br
-            %span.fields Phone Number:
-            %span
-              = @restaurant.phone
+            = @restaurant.phone
             %br
             %span
               = link_to "#{@restaurant.website}", @restaurant.website

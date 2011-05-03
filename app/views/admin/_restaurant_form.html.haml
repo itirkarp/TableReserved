@@ -9,18 +9,18 @@
         %br
         = f.text_field :name
       #right-field
-        = f.label :offer, "Offer"
+        = f.label :offer, "Discount"
         %br
         = f.text_field :offer
       %br
       #left-field
-        = f.label :location, "Location"
-        %br
-        = f.text_field :location
-      #right-field
         = f.label :cuisine, "Cuisine"
         %br
         = f.text_field :cuisine
+      #right-field
+        = f.label :website, "Website URL"
+        %br
+        = f.text_field :website
       %br
       #left-field
         = f.label :address, "Address"
@@ -36,9 +36,9 @@
         %br
         = f.text_field :address_line_2
       #right-field
-        = f.label :website, "Website URL"
+        = f.label :offer_end_date, "Validity date (mm/dd/yyyy)"
         %br
-        = f.text_field :website
+        = f.text_field :offer_end_date, :maxlength => 10
       %br
       #left-field
         = f.label :offer_valid_days, "Days on which offer is valid"
@@ -56,8 +56,4 @@
         = f.label :logo, "Upload logo"
         %br
         = f.file_field :logo
-        %br
-        = f.label :offer_end_date, "Validity date (mm/dd/yyyy)"
-        %br
-        = f.text_field :offer_end_date, :maxlength => 10
       = submit_tag "Add Restaurant", :class => 'primary-button'

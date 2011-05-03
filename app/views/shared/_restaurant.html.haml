@@ -5,17 +5,19 @@
       %p.restaurant-name
         = restaurant.name
       = submit_tag "Get Offer", :class => 'primary-button'
-      %p.description
-        = "Enjoy #{restaurant.offer}% off your entire purchase"
     #photo
       = image_tag restaurant.photo
     #information
-      %p
+      #restaurant-logo
         = image_tag restaurant.logo
+      #address
+        = restaurant.address
+        %br
+        = restaurant.address_line_2
       %p.fields
-        Location
+        Discount
       %p
-        = restaurant.location
+        = "#{restaurant.offer}% off your entire purchase"
       %p.fields
         Cuisine
       %p
@@ -23,4 +25,4 @@
       %p.fields
         Offer Valid
       %p
-        = offer_validity(restaurant)
+        = restaurant.offer_valid_days

@@ -23,12 +23,18 @@ describe SessionsController do
       response.should redirect_to(root_url)
       session['user_id'].should == User.first.id
     end
+
+    it "should redirect to the admin page if admin logs in" do
+      User.stubs(:authenticate).returns(User.new(:email => 'admin@tablereserved.com'))
+      post :create
+      response.should redirect_to(admin_url)
+    end
   end
 
   describe "show" do
     it "should provide all the restaurants" do
       @controller.stubs(:current_user).returns(User.first)
-      Restaurant.stub(:find).and_return([Restaurant.new(:name => "Awesome", :photo => "/images/first_restaurant.jpg", :logo => "/images/logo.gif", :offer => "Enjoy 30% off on your total bill", :location => "Some cool neighbourhood", :cuisine => "Italian", :offer_end_date => "2011-05-15", :offer_valid_days => "Saturday and Sunday", :offer_valid_times => "Between 12 pm and 10 pm", :address => "Some street, some city", :phone => "1234567890")])
+      Restaurant.stub(:find).and_return([Restaurant.new(:name => "Awesome", :photo => "/images/first_restaurant.jpg", :logo => "/images/logo.gif", :offer => "Enjoy 30% off on your total bill", :cuisine => "Italian", :offer_end_date => "2011-05-15", :offer_valid_days => "Saturday and Sunday", :offer_valid_times => "Between 12 pm and 10 pm", :address => "Some street, some city", :phone => "1234567890")])
       get :show
       assigns[:restaurants].first.name.should == "Awesome"
     end
