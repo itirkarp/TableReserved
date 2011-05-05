@@ -17,10 +17,25 @@ describe RestaurantsController do
     it "should save the restaurant and redirect"
   end
 
-  it "should provide the restaurant for the admin view" do
-    @controller.stubs(:current_user).returns(User.first)
-    Restaurant.should_receive(:find).with(1).and_return(Restaurant.new(:name => "Restaurant"))
-    get :show_admin, :id => 1
-    assigns[:restaurant].name == "Restaurant"
+  it "should provide the restaurant for the admin view"
+
+  it "edit should assign a restaurant from the params"
+
+  describe "update" do
+    it "should render edit template when restaurant is invalid" do
+      @controller.stubs(:current_user).returns(User.new(:email => "admin@tablereserved.com"))
+      Restaurant.stubs(:find).returns(Restaurant.new)
+      Restaurant.any_instance.stubs(:valid?).returns(false)
+      put :update, :id => "1"
+      response.should redirect_to(edit_restaurant_url)
+    end
+
+    it "should redirect when restaurant is valid" do
+      @controller.stubs(:current_user).returns(User.new(:email => "admin@tablereserved.com"))
+      Restaurant.stubs(:find).returns(Restaurant.new)
+      Restaurant.any_instance.stubs(:valid?).returns(true)
+      put :update, :id => "1"
+      response.should redirect_to(admin_url)
+    end
   end
 end

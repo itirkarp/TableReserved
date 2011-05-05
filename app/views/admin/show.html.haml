@@ -3,7 +3,12 @@
 = render "shared/header"
 
 #page
-  = render "restaurant_form"
+  #restaurant-form
+    = flash[:notice]
+    %h3 Add a new restaurant :
+    All fields are mandatory.
+    %p
+    = render "shared/restaurant_form"
   #user-info
     %h3 User Information :
     %p

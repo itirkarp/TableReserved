@@ -1,0 +1,10 @@
+= content_for :title, "Edit"
+
+#page
+  #restaurant-edit
+    %h3
+      = "Edit details for #{@restaurant.name}"
+    = flash[:notice]
+    %br
+    All fields are mandatory.
+    = render "shared/restaurant_form"

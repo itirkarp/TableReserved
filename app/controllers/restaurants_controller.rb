@@ -1,12 +1,13 @@
 class RestaurantsController < ApplicationController
   before_filter :login_required
+  before_filter :admin_login, :only => [:show_admin, :remove_from_exclusives, :add_to_exclusives, :edit]
 
   def show
     @restaurant = Restaurant.find_by_id(params[:id])
   end
 
   def show_admin
-    @restaurant = Restaurant.find(params[:id])
+    @restaurant = Restaurant.find_by_id(params[:id])
   end
 
   def create
@@ -43,6 +44,22 @@ class RestaurantsController < ApplicationController
     restaurant.visible = 1
     restaurant.save
     redirect_to admin_url
+  end
+
+  def edit
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  def update
+
+    #TODO: fix this when you fix create
+
+    @restaurant = Restaurant.find(params[:id])
+    if @restaurant.update_attributes(params[:restaurant])
+      redirect_to admin_url, :notice => "Restaurant details have been updated."
+    else
+      redirect_to edit_restaurant_url(@restaurant.id), :notice => 'There were errors. Please check all values and try again.'
+    end
   end
 
 end
