@@ -1,0 +1,15 @@
+%tr
+  %td
+    = user.email
+  %td
+    = user.first_name
+  %td
+    = user.last_name
+  %td
+    = user.zip_code
+  %td
+    = user.created_at.strftime('%B %e, %Y')
+  %td
+    = link_to "Edit", edit_user_url(user.id)
+  %td
+    = link_to 'Delete Forever', '#'

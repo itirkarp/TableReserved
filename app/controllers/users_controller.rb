@@ -2,7 +2,7 @@ require 'fastercsv'
 
 class UsersController < ApplicationController
   before_filter :login_required, :except => [:new, :create]
-  before_filter :admin_login, :only => :show_all_users_csv
+  before_filter :admin_login, :only => [:show_all_users_csv, :all_users, :admin_update]
 
   def new
     @user = User.new
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def update
@@ -33,8 +33,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def admin_update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      redirect_to all_users_url, :notice => "User details have been updated."
+    else
+      redirect_to edit_user_url(@user.id), :notice => 'There were errors. Please check all values and try again.'
+    end
+  end
+
   def show
-    @user = current_user
+    @user = User.find params[:id]
   end
 
   def all_users_csv
@@ -46,4 +55,7 @@ class UsersController < ApplicationController
     send_data users_csv, :type => 'test/plain', :filename => 'users.csv', :disposition => 'attachment'
   end
 
+  def all_users
+    @users = User.find(:all)
+  end
 end

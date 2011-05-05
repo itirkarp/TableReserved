@@ -1,0 +1,8 @@
+= content_for :title, "All Users"
+
+#page
+  #users
+    %h3 All Existing Users :
+    = flash[:notice]
+    %table
+      = render :partial => "user", :collection => @users

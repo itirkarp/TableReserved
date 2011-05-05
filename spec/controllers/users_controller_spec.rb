@@ -2,7 +2,6 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe UsersController do
   fixtures :all
-  render_views
 
   describe "new" do
 
@@ -65,8 +64,31 @@ describe UsersController do
 
   end
 
+  describe "admin_update" do
+
+    it "should redirect to all users when user is successfully updated" do
+      @controller.stubs(:current_user).returns(User.new(:email => 'admin@tablereserved.com'))
+      User.stubs(:find).with(1).returns(user = User.new)
+      user.stubs(:update_attributes).returns(true)
+      put :admin_update, :id => 1
+      response.should redirect_to(all_users_url)
+    end
+
+    it "should redirect to edit page when user is not successfully updated" do
+      @controller.stubs(:current_user).returns(User.new(:email => 'admin@tablereserved.com'))
+      User.stubs(:find).with(1).returns(user = User.new)
+      user.stubs(:update_attributes).returns(false)
+      put :admin_update, :id => 1
+      response.should redirect_to(edit_user_url)
+    end
+  end
+
   describe "show" do
-    it "should make the user details available" do
+    it "should show the user for the id in params" do
+      @controller.stubs(:current_user).returns(User.new :first_name => "admin")
+      User.stubs(:find).with(1).returns(User.new :first_name => "shiela")
+      get :show, :id => 1
+      assigns[:user].first_name.should == "shiela"
     end
   end
 
@@ -74,5 +96,12 @@ describe UsersController do
     @controller.stubs(:current_user).returns(User.first)
     get :all_users_csv
     response.body.include?("foo@example.com").should == true
+  end
+
+  it "should expose all the user information" do
+    @controller.stubs(:current_user).returns(User.new(:email => 'admin@tablereserved.com'))
+    User.stubs(:find).returns([User.new, User.new])
+    get :all_users
+    assigns[:users].count.should == 2
   end
 end

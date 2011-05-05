@@ -202,6 +202,7 @@
         margin-top: 0.5em; }
 
 #restaurant-form {
+  float: left;
   padding: 15px 0 0 20px;
   line-height: 25px; }
   #restaurant-form #left-field {
@@ -215,13 +216,36 @@
   #restaurant-form .primary-button {
     margin-top: 15px; }
 
+#user-info {
+  float: left;
+  padding: 15px 0 0 40px;
+  width: 300px; }
+  #user-info p {
+    float: left;
+    margin-right: 25px; }
+
 #restaurants {
+  clear: both;
   padding: 15px 0 0 20px;
   line-height: 35px; }
   #restaurants table {
     border: 1px solid; }
   #restaurants td {
     padding: 0 10px; }
+
+#user {
+  padding: 15px 0 0 20px;
+  line-height: 25px; }
+
+#users {
+  width: 100%;
+  clear: both;
+  padding: 15px 0 0 20px;
+  line-height: 35px; }
+  #users table {
+    border: 1px solid; }
+  #users td {
+    padding: 0 15px; }
 
 .photo {
   width: 400px; }

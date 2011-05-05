@@ -10,6 +10,8 @@ TableReservation::Application.routes.draw do
   resources :sessions
 
   match 'all_users_csv' => 'users#all_users_csv', :as => :all_users_csv
+  match 'all_users' => 'users#all_users', :as => :all_users
+  match 'users/:id/admin_update' => 'users#admin_update', :as => :admin_update_user
 
   resources :users
 
