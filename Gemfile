@@ -33,10 +33,10 @@ gem 'mysql'
 
 group :development do
   gem 'nifty-generators'
+  gem 'mocha', :group => :test
 end
 
 gem 'rspec-rails', :group => [:development, :test]
 gem "bcrypt-ruby", :require => "bcrypt"
-gem 'mocha', :group => :test
 gem 'haml'
 gem 'fastercsv'
