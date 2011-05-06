@@ -11,4 +11,4 @@
     = user.created_at.strftime('%B %e, %Y')
   %td
     = link_to "Edit", edit_user_url(user.id)
-    = link_to 'Delete Forever', '#'
+    = link_to 'Delete Forever', delete_user_url(user.id)

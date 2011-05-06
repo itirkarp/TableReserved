@@ -104,4 +104,16 @@ describe UsersController do
     get :all_users
     assigns[:users].count.should == 2
   end
+
+  describe "destroy" do
+    it "should delete the user" do
+      @controller.stubs(:current_user).returns(User.new(:email => "admin@tablereserved.com"))
+      user = User.new.save(:validate => false)
+      User.stubs(:find).returns(user)
+      user.should_receive(:destroy)
+      post :destroy, :id => user.id.to_s
+
+      response.should redirect_to(all_users_url)
+    end
+  end
 end

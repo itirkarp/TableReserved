@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
   before_filter :login_required
-  before_filter :admin_login, :only => [:show_admin, :remove_from_exclusives, :add_to_exclusives, :edit]
+  before_filter :admin_login, :only => [:show_admin, :remove_from_exclusives, :add_to_exclusives, :edit, :destroy]
 
   def show
     @restaurant = Restaurant.find_by_id(params[:id])

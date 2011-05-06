@@ -45,5 +45,7 @@ describe RestaurantsController do
     Restaurant.stubs(:find).returns(restaurant)
     restaurant.should_receive(:destroy)
     post :destroy, :id => restaurant.id.to_s
+
+    response.should redirect_to(admin_url)
   end
 end

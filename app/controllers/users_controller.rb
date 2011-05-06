@@ -2,7 +2,7 @@ require 'fastercsv'
 
 class UsersController < ApplicationController
   before_filter :login_required, :except => [:new, :create]
-  before_filter :admin_login, :only => [:show_all_users_csv, :all_users, :admin_update]
+  before_filter :admin_login, :only => [:show_all_users_csv, :all_users, :admin_update, :destroy]
 
   def new
     @user = User.new
@@ -57,5 +57,10 @@ class UsersController < ApplicationController
 
   def all_users
     @users = User.find(:all)
+  end
+
+  def destroy
+    User.find(params[:id].to_i).destroy
+    redirect_to all_users_url, :notice => "User deleted successfully"
   end
 end
