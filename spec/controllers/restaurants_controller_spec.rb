@@ -38,4 +38,12 @@ describe RestaurantsController do
       response.should redirect_to(admin_url)
     end
   end
+
+  it "should delete restaurant from id in params" do
+    @controller.stubs(:current_user).returns(User.new(:email => "admin@tablereserved.com"))
+    restaurant = Restaurant.new.save!
+    Restaurant.stubs(:find).returns(restaurant)
+    restaurant.should_receive(:destroy)
+    post :destroy, :id => restaurant.id.to_s
+  end
 end

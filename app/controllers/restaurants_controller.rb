@@ -62,4 +62,9 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def destroy
+    Restaurant.find(params[:id].to_i).destroy
+    redirect_to admin_url, :notice => "The restaurant was deleted."
+  end
+
 end

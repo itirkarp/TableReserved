@@ -18,13 +18,14 @@ TableReservation::Application.routes.draw do
   resources :restaurants
 
   match 'restaurants/:id' => 'restaurants#show', :via => [:post]
-
+  match 'restaurants/:id/delete' => 'restaurants#destroy', :as => :delete_restaurant
+  match 'restaurants/show_admin/:id' => 'restaurants#show_admin', :as => :restaurant_show_admin
   match 'remove_from_exclusives/:id' => 'restaurants#remove_from_exclusives', :as => :remove_from_exclusives
   match 'add_to_exclusives/:id' => 'restaurants#add_to_exclusives', :as => :add_to_exclusives
 
   match 'admin' => 'admin#show', :as => :admin
 
-  match 'restaurants/show_admin/:id' => 'restaurants#show_admin', :as => :restaurant_show_admin
+
 
 
   # The priority is based upon order of creation:
