@@ -4,7 +4,8 @@
   #header #logo {
     width: 12%;
     float: left;
-    margin: 7px 0 0 11%; }
+    margin: 7px 0 0 11%;
+    cursor: pointer; }
     #header #logo img {
       width: 132px; }
   #header #seperator {
@@ -243,9 +244,20 @@
   padding: 15px 0 0 20px;
   line-height: 35px; }
   #users table {
-    border: 1px solid; }
-  #users td {
-    padding: 0 15px; }
+    border: 1px solid;
+    border-collapse: collapse; }
+    #users table th {
+      border: 1px solid;
+      cursor: pointer;
+      padding: 0 15px; }
+    #users table td {
+      padding: 0 15px; }
+    #users table .header {
+      background-color: #d3d3d3; }
+    #users table .headerSortUp {
+      background-color: #b0c4de; }
+    #users table .headerSortDown {
+      background-color: #b0c4de; }
 
 .photo {
   width: 400px; }

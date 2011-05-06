@@ -1,8 +1,19 @@
 = content_for :title, "All Users"
 
+- javascript("users/all_users")
+
 #page
   #users
     %h3 All Existing Users :
     = flash[:notice]
-    %table
-      = render :partial => "user", :collection => @users
+    %table{:id => 'all-users'}
+      %thead
+        %tr
+          %th Email
+          %th First Name
+          %th Last Name
+          %th Zip Code
+          %th Created At
+          %th Actions
+      %tbody
+        = render :partial => "user", :collection => @users
