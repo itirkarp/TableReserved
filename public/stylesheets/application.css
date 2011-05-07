@@ -70,12 +70,12 @@
   opacity: 0.8;
   padding: 20px 40px 20px 70px;
   height: 575px;
-  left: 50%;
-  top: 50%;
-  margin: -350px 0 0 -370px;
+  left: 23%;
+  top: 5%;
   position: absolute;
   width: 680px;
-  text-align: left; }
+  text-align: left;
+  filter: alpha(opacity=90); }
   #content .field {
     width: 175px; }
   #content .name-field {
@@ -84,6 +84,7 @@
     color: white; }
   #content h2 {
     color: #1874cd;
+    font-size: 18px;
     margin-bottom: 8px; }
   #content #button {
     opacity: 1; }
@@ -91,7 +92,7 @@
     width: 27%;
     float: left; }
   #content #slogan {
-    font-size: 23px;
+    font-size: 20px;
     width: 70%;
     float: right;
     margin-top: 20px; }
@@ -130,14 +131,15 @@
   #content #footer {
     clear: both;
     float: left;
-    margin-top: 10px; }
+    margin-top: 10px;
+    width: 718px; }
     #content #footer a {
       margin: 2px 2px 0 2px;
       text-decoration: none; }
   #content #copyright {
     clear: both;
     font-size: 9px;
-    width: 35%;
+    width: 250px;
     margin-left: 192px;
     padding-top: 10px; }
 
@@ -265,6 +267,9 @@
 .logo {
   width: 160px; }
 
+html {
+  height: 100%; }
+
 body {
   background-color: lightSteelBlue;
   height: 3000px;
@@ -332,7 +337,8 @@ a {
           margin: 4em 0 2em 2em;
           width: 910px;
           height: 27em;
-          border: 1px solid #c1cdcd; }
+          border: 1px solid #c1cdcd;
+          position: relative; }
           #container #page #tabs #tabs-1 #restaurant-box #heading {
             float: left;
             padding: 0 0 0.5em 1em;
@@ -385,7 +391,7 @@ a {
         float: left;
         margin: 9em 0 0 2em; }
     #container #page #footer {
-      width: 70%;
+      width: 75%;
       margin: 0 0 2em 11em;
       position: absolute;
       bottom: 0; }
@@ -397,11 +403,12 @@ a {
 .primary-button {
   height: 26px;
   -moz-border-radius: 6px 6px 6px 6px;
+  -webkit-border-radius: 8px;
+  behavior: url(border-radius.htc);
   font-size: 18px;
   background-color: #2a4187;
   border: 1px solid #2a4187;
   color: white;
-  -webkit-border-radius: 8px;
   -moz-box-shadow: 1px 1px 1.5px #11083a;
   -webkit-box-shadow: 1px 1px 1.5px #11083a;
   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#11083A')";

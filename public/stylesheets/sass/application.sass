@@ -10,9 +10,13 @@
 +show_restaurant_admin
 +users
 
+html
+  height: 100%
+
 body
   background-color: lightSteelBlue
   height: 3000px
+  //height: 100%
   font:
     family: Verdana, Helvetica, Arial
     size: 14px
@@ -91,6 +95,7 @@ a
           width: 910px
           height: 27em
           border: 1px solid #C1CDCD
+          position: relative  //for IE
           #heading
             float: left
             padding: 0 0 0.5em 1em
@@ -143,7 +148,7 @@ a
         float: left
         margin: 9em 0 0 2em
     #footer
-      width: 70%
+      width: 75%
       margin: 0 0 2em 11em
       position: absolute
       bottom: 0
@@ -157,11 +162,12 @@ a
 .primary-button
   height: 26px
   -moz-border-radius: 6px 6px 6px 6px
+  -webkit-border-radius: 8px
+  behavior: url(border-radius.htc) //for IE
   font-size: 18px
   background-color: #2A4187
   border: 1px solid #2A4187
   color: white
-  -webkit-border-radius: 8px
   -moz-box-shadow: 1px 1px 1.5px #11083A
   -webkit-box-shadow: 1px 1px 1.5px #11083A
   -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#11083A')"
