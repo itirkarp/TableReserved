@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110503055117) do
+ActiveRecord::Schema.define(:version => 20110509054206) do
 
   create_table "restaurants", :force => true do |t|
     t.string  "name"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20110503055117) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "zip_code"
+    t.string   "remember_token"
   end
 
 end
