@@ -29,6 +29,21 @@ describe SessionsController do
       post :create
       response.should redirect_to(admin_url)
     end
+
+    it "should remember the user if remember me is checked" do
+      User.stubs(:authenticate).returns(user = User.first)
+      Digest::SHA1.stubs(:hexdigest).returns("token")
+      post :create, :remember => 1
+      user.remember_token.should_not be_nil
+      response.cookies["auth_token"].should_not be_nil
+    end
+
+    it "should not remember the user if remember me is not checked" do
+      User.stubs(:authenticate).returns(user = User.first)
+      post :create
+      user.remember_token.should be_nil
+      response.cookies["auth_token"].should be_nil
+    end
   end
 
   describe "show" do
@@ -48,5 +63,11 @@ describe SessionsController do
       assigns[:restaurants].count.should == 1
       assigns[:restaurants].first.name.should == visible.name
     end
+  end
+
+  it "should delete the authentication token cookie" do
+    @controller.stubs(:current_user).returns(User.first)
+    post :destroy
+    response.cookies["auth_token"].should be_nil
   end
 end

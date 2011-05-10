@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   # new columns need to be added here to be writable through mass assignment
-  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :zip_code, :terms
+  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :zip_code, :terms, :remember_token
 
   attr_accessor :password
   before_save :prepare_password
@@ -26,6 +26,18 @@ class User < ActiveRecord::Base
 
   def admin?
     email == 'admin@tablereserved.com'
+  end
+
+  def remember_me
+    token = Digest::SHA1.hexdigest(self.email)
+    self.remember_token = token
+    self.save(:validate => false)
+    token
+  end
+
+  def forget_me
+    self.remember_token = nil
+    self.save(false)
   end
 
   private

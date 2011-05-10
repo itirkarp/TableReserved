@@ -79,5 +79,11 @@ describe User do
 
   end
 
-
+  it "should set the remember token" do
+    token = "token"
+    user = new_user(:email => 'foo@bar.com')
+    Digest::SHA1.stubs(:hexdigest).with(user.email).returns(token)
+    user.remember_me.should == token
+    user.remember_token.should == token
+  end
 end

@@ -35,6 +35,12 @@ module ControllerAuthentication
     end
   end
 
+  def login_from_cookie
+    return unless cookies[:auth_token] and current_user.nil?
+    user = User.find_by_remember_token(cookies[:auth_token])
+    session[:user_id] = user.id if user
+  end
+
   def admin_login
     unless current_user.admin?
       store_target_location

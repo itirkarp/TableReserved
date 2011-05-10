@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  before_filter :login_from_cookie, :only => [:show, :show_admin, :edit]
   before_filter :login_required
   before_filter :admin_login, :only => [:show_admin, :remove_from_exclusives, :add_to_exclusives, :edit, :destroy]
 
