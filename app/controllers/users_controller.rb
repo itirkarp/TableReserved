@@ -22,7 +22,8 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    user_being_edited = User.find(params[:id])
+    @user = user_being_edited if current_user_is_admin? or current_user.email == user_being_edited.email
   end
 
   def update
@@ -44,7 +45,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find params[:id]
+    @user = current_user
   end
 
   def all_users_csv

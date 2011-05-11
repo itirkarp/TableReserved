@@ -34,12 +34,29 @@ describe UsersController do
       response.should redirect_to(login_url)
     end
 
-    it "should render edit template" do
-      @controller.stubs(:current_user).returns(User.first)
-      get :edit, :id => "ignored"
-      response.should render_template(:edit)
+    it "should allow admin user to edit any user" do
+      User.stubs(:find).returns(User.new :email => 'email')
+      @controller.stubs(:current_user_is_admin?).returns(true)
+      @controller.stubs(:current_user).returns(User.new :email => "admin@tablereserved.com")
+      get :edit, :id => '1'
+      assigns[:user].email.should == 'email'
     end
 
+    it "should allow the logged in user to edit himself" do
+      user = User.new :email => 'email'
+      User.stubs(:find).returns(user)
+      @controller.stubs(:current_user_is_admin?).returns(false)
+      @controller.stubs(:current_user).returns(user)
+      get :edit, :id => '1'
+      assigns[:user].email.should == 'email'
+    end
+
+    it "should not allow the logged in user to edit any other user" do
+      User.stubs(:find).returns(User.new :email => 'email')
+      @controller.stubs(:current_user).returns(User.new :email => "other_email")
+      get :edit, :id => '1'
+      assigns[:user].should be_nil
+    end
   end
 
   describe "update" do
@@ -84,11 +101,10 @@ describe UsersController do
   end
 
   describe "show" do
-    it "should show the user for the id in params" do
+    it "should show the current user" do
       @controller.stubs(:current_user).returns(User.new :first_name => "admin")
-      User.stubs(:find).with(1).returns(User.new :first_name => "shiela")
-      get :show, :id => 1
-      assigns[:user].first_name.should == "shiela"
+      get :show
+      assigns[:user].first_name.should == "admin"
     end
   end
 

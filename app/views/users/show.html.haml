@@ -1,5 +1,29 @@
-.h2
-  Your account information:
-#user-details
-  %p
-    = label :email, @user.email
+= content_for :title, "My Account"
+
+= render "shared/header"
+
+#page
+  #user-information
+    .header
+      .heading
+        Your account information
+    .information
+      %label.field Email Address :
+      %label
+        = @user.email
+      %br
+      %label.field Name :
+      %label
+        = "#{@user.first_name} #{@user.last_name}"
+      %br
+      %label.field Zip Code :
+      %label
+        = @user.zip_code
+      %br
+      %label.field Account Creation Date :
+      %label
+        = @user.created_at.strftime('%B %e, %Y')
+      %br
+      = link_to "Edit", edit_user_url(@user.id)
+
+

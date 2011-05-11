@@ -14,6 +14,7 @@ TableReservation::Application.routes.draw do
   match 'all_users' => 'users#all_users', :as => :all_users
   match 'users/:id/admin_update' => 'users#admin_update', :as => :admin_update_user
   match 'forgot_password' => 'passwords#forgot', :as => :forgot_password
+  match 'user' => 'users#show', :as => :user
 
   resources :users
 

@@ -261,6 +261,21 @@
     #users table .headerSortDown {
       background-color: #b0c4de; }
 
+#user-information {
+  padding: 30px 20px 0 20px;
+  width: 500px; }
+  #user-information .header {
+    background: -moz-linear-gradient(center bottom, #f7f7f7 1pt, #e8f0f7 100%) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #e8f0f7));
+    border-bottom: 1px solid #c1cdcd;
+    width: 290px; }
+    #user-information .header .heading {
+      font-size: 1.5em;
+      margin-left: 5px;
+      color: #1874cd; }
+  #user-information .information {
+    margin-top: 20px; }
+
 .photo {
   width: 400px; }
 
