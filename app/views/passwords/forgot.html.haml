@@ -1,0 +1,13 @@
+#header
+  #logo
+    = image_tag "reserved.jpg", :id => 'logo-image'
+#gap
+#page
+  #forgot-password
+    = form_tag generate_password_url do
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices euismod mollis. Donec congue, sapien at dapibus blandit, sem neque volutpat ligula, id ullamcorper tortor purus a odio. Donec at tortor justo, non suscipit nunc. Nulla magna neque, rhoncus non sodales a, varius in lorem.
+      %p
+        = label_tag :email, "Enter your Registered Email Address :"
+        = text_field_tag :email, params[:email], :class => 'field'
+      %p.button
+        = submit_tag "Submit", :class => 'primary-button'

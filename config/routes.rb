@@ -13,6 +13,7 @@ TableReservation::Application.routes.draw do
   match 'all_users_csv' => 'users#all_users_csv', :as => :all_users_csv
   match 'all_users' => 'users#all_users', :as => :all_users
   match 'users/:id/admin_update' => 'users#admin_update', :as => :admin_update_user
+  match 'forgot_password' => 'passwords#forgot', :as => :forgot_password
 
   resources :users
 
@@ -26,6 +27,7 @@ TableReservation::Application.routes.draw do
 
   match 'admin' => 'admin#show', :as => :admin
 
+  match 'generate_password' => 'passwords#generate', :as => :generate_password
 
 
 

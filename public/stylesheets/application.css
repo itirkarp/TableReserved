@@ -399,6 +399,12 @@ a {
         margin: 2px 2px 0 2px;
         text-decoration: none;
         color: black; }
+    #container #page #forgot-password {
+      padding: 20px 40px 0 40px; }
+      #container #page #forgot-password input {
+        margin-left: 10px; }
+      #container #page #forgot-password .button {
+        margin-left: 245px; }
 
 .primary-button {
   height: 26px;
