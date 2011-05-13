@@ -1,3 +1,5 @@
+= content_for :title, 'Forgot Password'
+
 #header
   #logo
     = image_tag "reserved.jpg", :id => 'logo-image'
@@ -5,8 +7,10 @@
 #page
   #forgot-password
     = form_tag generate_password_url do
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices euismod mollis. Donec congue, sapien at dapibus blandit, sem neque volutpat ligula, id ullamcorper tortor purus a odio. Donec at tortor justo, non suscipit nunc. Nulla magna neque, rhoncus non sodales a, varius in lorem.
+      If you have forgotten your password, enter the email address you used to register on Table Reserved and an email with a temporary password will be sent to that address. You can login with this new password.
       %p
+      To change the temporary password, visit the 'My Account' section after logging in.
+      .email
         = label_tag :email, "Enter your Registered Email Address :"
         = text_field_tag :email, params[:email], :class => 'field'
       %p.button

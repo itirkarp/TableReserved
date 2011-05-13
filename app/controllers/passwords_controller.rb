@@ -5,7 +5,10 @@ class PasswordsController < ApplicationController
   def generate
     user = User.find_by_email(params[:email])
     password = random_password 6
-    UserMailer.password_email(user.email, password).deliver
+    if user
+      UserMailer.password_email(user.email, password).deliver
+      user.update_attributes(:password => password)
+    end
   end
 
   private
