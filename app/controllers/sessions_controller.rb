@@ -37,7 +37,7 @@ class SessionsController < ApplicationController
 
   def remember user
     token = user.remember_me
-    cookies[:auth_token] = {:value => token, :expires => 2.weeks.from_now}
+    cookies[:auth_token] = {:value => token}
   end
 
   def forget_user

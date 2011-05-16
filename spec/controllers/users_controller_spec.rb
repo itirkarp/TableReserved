@@ -59,28 +59,6 @@ describe UsersController do
     end
   end
 
-  describe "update" do
-    it "should redirect when not logged in" do
-      put :update, :id => "ignored"
-      response.should redirect_to(login_url)
-    end
-
-    it "should render edit template when user is invalid" do
-      @controller.stubs(:current_user).returns(User.first)
-      User.any_instance.stubs(:valid?).returns(false)
-      put :update, :id => "ignored"
-      response.should render_template(:edit)
-    end
-
-    it "should redirect when user is valid" do
-      @controller.stubs(:current_user).returns(User.first)
-      User.any_instance.stubs(:valid?).returns(true)
-      put :update, :id => "ignored"
-      response.should redirect_to(root_url)
-    end
-
-  end
-
   describe "admin_update" do
 
     it "should redirect to all users when user is successfully updated" do
@@ -91,13 +69,6 @@ describe UsersController do
       response.should redirect_to(all_users_url)
     end
 
-    it "should redirect to edit page when user is not successfully updated" do
-      @controller.stubs(:current_user).returns(User.new(:email => 'admin@tablereserved.com'))
-      User.stubs(:find).with(1).returns(user = User.new)
-      user.stubs(:update_attributes).returns(false)
-      put :admin_update, :id => 1
-      response.should redirect_to(edit_user_url)
-    end
   end
 
   describe "show" do

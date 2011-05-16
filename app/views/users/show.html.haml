@@ -1,3 +1,5 @@
+- javascript('users/show')
+
 = content_for :title, "My Account"
 
 = render "shared/header"
@@ -25,6 +27,25 @@
         = @user.created_at.strftime('%B %e, %Y')
       %br
       = link_to "Edit Information", edit_user_url(@user.id)
-      = link_to "Change Password", "#"
 
-
+  #edit-password
+    .header
+      .heading
+        Change Password
+    = form_tag update_password_url do
+      .error
+        = flash[:notice]
+      %p
+        = label_tag :old_password, "Enter your current password"
+        %br
+        = password_field_tag :old_password, nil
+      %p
+        = label_tag :new_password, "Enter the new password"
+        %br
+        = password_field_tag :new_password, nil
+      %p
+        = label_tag :password_confirmation, "Confirm the new password"
+        %br
+        = password_field_tag :password_confirmation
+      %p
+        = submit_tag "Update", :class => 'primary-button', :name => 'update'
