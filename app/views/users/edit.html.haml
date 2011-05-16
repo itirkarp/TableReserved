@@ -1,5 +1,7 @@
 = content_for :title, "Edit"
 
+= render "shared/header"
+
 #page
   #user
     %h3
@@ -8,8 +10,8 @@
     %br
     All fields are mandatory.
     = form_for @user, :url => admin_update_user_url do |f|
-      -#%span.flash-error
-      -#  = f.error_messages.first[:first_name].first ? f.error_messages.first[:first_name].first : f.error_messages.first[:last_name].first
+      %span.flash-error
+        = f.error_messages.first[:first_name].first ? f.error_messages.first[:first_name].first : f.error_messages.first[:last_name].first
       #first-name
         = f.label :first_name, "First name"
         %br
@@ -21,25 +23,16 @@
         %br
       #fields
         = f.label :email, "Email Address"
-        -#%span.flash-error
-        -#  = f.error_messages.first[:email].first
+        %span.flash-error
+          = f.error_messages.first[:email].first
         %br
         = f.text_field :email, :class => 'field'
       %p
-        = f.label :password, "Password"
-        -#%span.flash-error
-        -#  = f.error_messages.first[:password].first
-        %br
-        = f.password_field :password, :class => 'field'
-      %p
-        = f.label :password_confirmation, "Confirm Password"
-        %br
-        = f.password_field :password_confirmation, :class => 'field'
-      %p
         = f.label :zip_code, "Zip Code"
-        -#%span.flash-error
-        -#  = f.error_messages.first[:zip_code].first
+        %span.flash-error
+          = f.error_messages.first[:zip_code].first
         %br
         = f.text_field :zip_code, :class => 'field'
-      #button
-        = submit_tag "Update", :class => 'primary-button'
+        %p
+        = submit_tag "Update", :class => 'primary-button', :name => 'update'
+        = submit_tag "Cancel", :class => 'primary-button', :name => 'cancel'

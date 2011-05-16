@@ -24,6 +24,7 @@
       %label
         = @user.created_at.strftime('%B %e, %Y')
       %br
-      = link_to "Edit", edit_user_url(@user.id)
+      = link_to "Edit Information", edit_user_url(@user.id)
+      = link_to "Change Password", "#"
 
 

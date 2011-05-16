@@ -7,10 +7,11 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :email
   validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
-  validates_presence_of :password, :zip_code
-  validates_presence_of :first_name, :last_name, :message => "First name or last name is invalid"
+  validates_presence_of :password, :on => :create
   validates_confirmation_of :password
   validates_length_of :password, :minimum => 6, :allow_blank => true
+  validates_presence_of :first_name, :last_name, :message => "First name or last name is invalid"
+  validates_presence_of :zip_code
   validates_length_of :zip_code, :is => 5, :message => "is invalid"
   validates_numericality_of :zip_code, :message => "is invalid"
   validates_acceptance_of :terms, :on => :create, :message => "Terms must be accepted"

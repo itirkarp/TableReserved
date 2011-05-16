@@ -239,6 +239,8 @@
 #user {
   padding: 15px 0 0 20px;
   line-height: 25px; }
+  #user .primary-button {
+    margin: 10px 85px 0 0; }
 
 #users {
   width: 100%;

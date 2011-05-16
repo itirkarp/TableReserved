@@ -3,7 +3,7 @@ require 'fastercsv'
 class UsersController < ApplicationController
   before_filter :login_from_cookie, :only => [:show, :all_users]
   before_filter :login_required, :except => [:new, :create]
-  before_filter :admin_login, :only => [:show_all_users_csv, :all_users, :admin_update, :destroy]
+  before_filter :admin_login, :only => [:show_all_users_csv, :all_users, :destroy]
 
   def new
     @user = User.new
@@ -26,21 +26,13 @@ class UsersController < ApplicationController
     @user = user_being_edited if current_user_is_admin? or current_user.email == user_being_edited.email
   end
 
-  def update
-    @user = current_user
-    if @user.update_attributes(params[:user])
-      redirect_to root_url, :notice => "Your profile has been updated."
-    else
-      render :action => 'edit'
-    end
-  end
-
   def admin_update
+    redirect_to user_url and return if params["cancel"]
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       redirect_to all_users_url, :notice => "User details have been updated."
     else
-      redirect_to edit_user_url(@user.id), :notice => 'There were errors. Please check all values and try again.'
+      render :action => "users/edit", :notice => 'There were errors. Please check all values and try again.'
     end
   end
 
@@ -52,7 +44,7 @@ class UsersController < ApplicationController
     users = User.all
     users_csv = FasterCSV.generate do |csv|
       csv << ["email", "first_name", "last_name", "zip_code", "created_at"]
-      users.each { |u| csv << [u.email, u.first_name, u.last_name, u.zip_code, u.created_at]}
+      users.each { |u| csv << [u.email, u.first_name, u.last_name, u.zip_code, u.created_at] }
     end
     send_data users_csv, :type => 'test/plain', :filename => 'users.csv', :disposition => 'attachment'
   end
