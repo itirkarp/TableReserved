@@ -253,9 +253,11 @@
     #users table th {
       border: 1px solid;
       cursor: pointer;
-      padding: 0 15px; }
+      padding: 0 15px;
+      width: 117px; }
     #users table td {
-      padding: 0 15px; }
+      padding: 0 10px;
+      word-wrap: break-word; }
     #users table .header {
       background-color: #d3d3d3; }
     #users table .headerSortUp {
