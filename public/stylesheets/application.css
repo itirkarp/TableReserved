@@ -269,6 +269,9 @@
   float: left; }
   #user-information .information {
     margin: 20px 0 0 10px; }
+  #user-information .link {
+    margin: 30px 0 0 150px;
+    font-size: 17px; }
 
 .header {
   background: -moz-linear-gradient(center bottom, #f7f7f7 1pt, #e8f0f7 100%) repeat scroll 0 0 transparent;

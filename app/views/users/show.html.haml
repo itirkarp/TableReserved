@@ -10,23 +10,24 @@
       .heading
         Your account information
     .information
-      %label.field Email Address :
-      %label
-        = @user.email
-      %br
-      %label.field Name :
-      %label
-        = "#{@user.first_name} #{@user.last_name}"
-      %br
-      %label.field Zip Code :
-      %label
-        = @user.zip_code
-      %br
-      %label.field Account Creation Date :
-      %label
-        = @user.created_at.strftime('%B %e, %Y')
-      %br
-      = link_to "Edit Information", edit_user_url(@user.id)
+      %p
+        %label.field Email Address :
+        %label
+          = @user.email
+      %p
+        %label.field Name :
+        %label
+          = "#{@user.first_name} #{@user.last_name}"
+      %p
+        %label.field Zip Code :
+        %label
+          = @user.zip_code
+      %p
+        %label.field Account Creation Date :
+        %label
+          = @user.created_at.strftime('%B %e, %Y')
+      .link
+        = link_to "Edit Information", edit_user_url(@user.id)
 
   #edit-password
     .header
