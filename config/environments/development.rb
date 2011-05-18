@@ -31,8 +31,8 @@ TableReservation::Application.configure do
       :address => "smtp.gmail.com",
       :port => 587,
       :domain => 'tablereserved.com',
-      :user_name => 'admin',
-      :password => '',
+      :user_name => 'admin@tablereserved.com',
+      :password => 'tablereserved333',
       :authentication => 'plain',
       :enable_starttls_auto => true}
 end
