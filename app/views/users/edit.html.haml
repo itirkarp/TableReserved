@@ -3,12 +3,13 @@
 = render "shared/header"
 
 #page
-  #user
-    %h3
-      = "Edit details for #{@user.email}"
+  #user-edit
+    .header
+      .heading
+        Edit account information
     = flash[:notice]
     %br
-    All fields are mandatory.
+    %h4 Note: All fields are mandatory.
     = form_for @user, :url => admin_update_user_url do |f|
       %span.flash-error
         = f.error_messages.first[:first_name].first ? f.error_messages.first[:first_name].first : f.error_messages.first[:last_name].first
@@ -27,7 +28,7 @@
           = f.error_messages.first[:email].first
         %br
         = f.text_field :email, :class => 'field'
-      %p
+        %br
         = f.label :zip_code, "Zip Code"
         %span.flash-error
           = f.error_messages.first[:zip_code].first

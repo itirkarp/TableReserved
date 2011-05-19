@@ -24,10 +24,11 @@ class UsersController < ApplicationController
   def edit
     user_being_edited = User.find(params[:id])
     @user = user_being_edited if current_user_is_admin? or current_user.email == user_being_edited.email
+    flash[:referrer] = request.referrer
   end
 
   def admin_update
-    redirect_to user_url and return if params["cancel"]
+    redirect_to flash[:referrer] and return if params["cancel"]
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       redirect_to all_users_url, :notice => "User details have been updated."
@@ -38,6 +39,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    flash[:referrer] = user_url
   end
 
   def all_users_csv

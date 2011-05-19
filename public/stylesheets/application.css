@@ -267,10 +267,20 @@
 
 #user-information {
   padding: 30px 20px 0 40px;
-  width: 500px;
+  width: 560px;
   float: left; }
   #user-information .information {
-    margin: 20px 0 0 10px; }
+    margin: 30px 0 0 0; }
+    #user-information .information table {
+      border: 1px solid #1874cd; }
+      #user-information .information table td {
+        padding: 10px 20px 10px 20px; }
+      #user-information .information table .field {
+        font-size: 16px; }
+      #user-information .information table tr {
+        background-color: #bddcf9; }
+      #user-information .information table tr.alternate {
+        background-color: lightSteelBlue; }
   #user-information .link {
     margin: 30px 0 0 150px;
     font-size: 17px; }
@@ -287,7 +297,8 @@
 
 #edit-password {
   float: left;
-  padding: 30px 20px 0 0; }
+  padding: 30px 20px 0 0;
+  line-height: 27px; }
   #edit-password .header {
     width: 235px; }
   #edit-password form {
@@ -296,6 +307,14 @@
       margin-left: 100px; }
     #edit-password form .error {
       width: 249px; }
+
+#user-edit {
+  padding: 50px 0 0 80px; }
+  #user-edit form {
+    padding-top: 10px;
+    line-height: 35px; }
+    #user-edit form .primary-button {
+      margin: 15px 85px 0 0; }
 
 .photo {
   width: 400px; }

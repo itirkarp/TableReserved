@@ -8,24 +8,25 @@
   #user-information
     .header
       .heading
-        Your account information
+        Account information
     .information
-      %p
-        %label.field Email Address :
-        %label
-          = @user.email
-      %p
-        %label.field Name :
-        %label
-          = "#{@user.first_name} #{@user.last_name}"
-      %p
-        %label.field Zip Code :
-        %label
-          = @user.zip_code
-      %p
-        %label.field Account Creation Date :
-        %label
-          = @user.created_at.strftime('%B %e, %Y')
+      %table
+        %tr
+          %td.field Email Address
+          %td
+            = @user.email
+        %tr.alternate
+          %td.field Name
+          %td
+            = "#{@user.first_name} #{@user.last_name}"
+        %tr
+          %td.field Zip Code
+          %td
+            = @user.zip_code
+        %tr.alternate
+          %td.field Member Since
+          %td
+            = @user.created_at.strftime('%B %e, %Y')
       .link
         = link_to "Edit Information", edit_user_url(@user.id)
 
