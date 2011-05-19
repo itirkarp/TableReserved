@@ -34,7 +34,7 @@
       background-color: #11083a;
       z-index: 999;
       margin-left: -9.5em;
-      width: 13em; }
+      width: 20em; }
       #header #arrow #cities ul {
         list-style: none;
         padding-left: 0; }
@@ -330,7 +330,7 @@
     padding-top: 10px;
     line-height: 35px; }
     #user-edit form .primary-button {
-      margin: 15px 85px 0 0; }
+      margin: 15px 35px 0 0; }
 
 .photo {
   width: 400px; }
