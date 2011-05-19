@@ -28,8 +28,11 @@ class RestaurantsController < ApplicationController
     params[:restaurant][:logo] = photo.original_filename
 
     restaurant = Restaurant.new(params[:restaurant])
-    restaurant.save_with_images(params[:restaurant])
-    flash[:notice] = 'Restaurant created successfully'
+    if restaurant.save(params[:restaurant])
+      flash[:notice] = 'Restaurant created successfully'
+    else
+      flash[:error] = 'The restaurant could not be saved. Please check that all fields are filled in and try again.'
+    end
     redirect_to admin_url
   end
 

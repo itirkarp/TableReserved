@@ -5,6 +5,8 @@
 #page
   #restaurant-form
     = flash[:notice]
+    .error
+      = flash[:error]
     %h3 Add a new restaurant :
     All fields are mandatory.
     %p

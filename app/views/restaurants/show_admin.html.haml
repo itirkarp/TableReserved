@@ -19,7 +19,7 @@
         %td
           Expiration Date :
         %td
-          = @restaurant.offer_end_date
+          = @restaurant.offer_end_date.strftime("%m/%d/%Y")
       %tr
         %td
           Valid Days :

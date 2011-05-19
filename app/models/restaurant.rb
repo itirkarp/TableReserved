@@ -1,6 +1,5 @@
 class Restaurant < ActiveRecord::Base
 
-  def save_with_images params
-    self.save(params)
-  end
+  validates_presence_of self.column_names - ["id"]
+
 end

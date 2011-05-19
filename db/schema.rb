@@ -10,13 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110509054206) do
+ActiveRecord::Schema.define(:version => 20110519113034) do
 
   create_table "restaurants", :force => true do |t|
     t.string  "name"
     t.string  "photo"
     t.string  "logo"
-    t.string  "location"
     t.string  "cuisine"
     t.date    "offer_end_date"
     t.string  "offer_valid_days"
