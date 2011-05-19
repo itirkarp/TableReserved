@@ -1,10 +1,10 @@
 = form_for(@restaurant, :html => {:multipart => true}) do |f|
   #left-field
-    = f.label :name, "Name"
+    = f.label :name, "Restaurant Name"
     %br
     = f.text_field :name
   #right-field
-    = f.label :offer, "Discount"
+    = f.label :offer, "Discount %"
     %br
     = f.text_field :offer
   %br
@@ -18,7 +18,7 @@
     = f.text_field :website
   %br
   #left-field
-    = f.label :address, "Address"
+    = f.label :address, "Street Address"
     %br
     = f.text_field :address
   #right-field
@@ -27,7 +27,7 @@
     = f.text_field :phone
   %br
   #left-field
-    = f.label :address_line_2, "Address line 2"
+    = f.label :address_line_2, "City, State, Zip Code"
     %br
     = f.text_field :address_line_2
   #right-field
@@ -51,4 +51,4 @@
     = f.label :logo, "Upload logo"
     %br
     = f.file_field :logo
-  = submit_tag "Add Restaurant", :class => 'primary-button'
+  = submit_tag "Save Restaurant", :class => 'primary-button'

@@ -242,6 +242,22 @@
   #user .primary-button {
     margin: 10px 85px 0 0; }
 
+#admin-restaurant {
+  padding: 15px 0 0 60px;
+  line-height: 35px; }
+  #admin-restaurant td {
+    padding: 5px 15px; }
+  #admin-restaurant #left-field {
+    clear: both;
+    float: left; }
+  #admin-restaurant #right-field {
+    float: left;
+    margin-left: 20px; }
+  #admin-restaurant #fields {
+    clear: both; }
+  #admin-restaurant .primary-button {
+    margin-top: 15px; }
+
 #users {
   width: 100%;
   clear: both;
