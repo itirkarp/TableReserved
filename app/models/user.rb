@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   validates_acceptance_of :terms, :on => :create, :message => "Terms must be accepted"
 
   def self.authenticate(login, pass)
-    user = find_by_email(login)
+    user = find_by_email(login.downcase)
     return user if user && user.password_hash == user.encrypt_password(pass)
   end
 
