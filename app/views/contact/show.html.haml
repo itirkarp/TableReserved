@@ -16,4 +16,6 @@
       = submit_tag "Submit", :class => 'primary-button'
     %br
     .information
-      You can also send us an email at support@tablereserved.com.
+      You can also send us an email at
+      = link_to "support@tablereserved.com", url_for("mailto:support@tablereserved.com")
+
