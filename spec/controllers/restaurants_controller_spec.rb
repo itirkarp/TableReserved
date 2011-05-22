@@ -41,7 +41,7 @@ describe RestaurantsController do
 
   it "should delete restaurant from id in params" do
     @controller.stubs(:current_user).returns(User.new(:email => "admin@tablereserved.com"))
-    restaurant = Restaurant.new.save!
+    restaurant = Restaurant.new.save(false)
     Restaurant.stubs(:find).returns(restaurant)
     restaurant.should_receive(:destroy)
     post :destroy, :id => restaurant.id.to_s

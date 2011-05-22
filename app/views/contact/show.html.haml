@@ -1,0 +1,19 @@
+= content_for :title, "Contact Us"
+
+= render "shared/header"
+
+#page
+  #contact
+    = flash[:notice]
+    %h3 Fill out the form below to contact us. All the information is required.
+    = form_tag contact_send_url do
+      = label_tag :name, "Name"
+      = text_field_tag :name, params[:name]
+      = label_tag :email, "Email Address"
+      = text_field_tag :email, params[:email]
+      = label_tag :comments, "Comments"
+      = text_area_tag :comments, params[:comments]
+      = submit_tag "Submit", :class => 'primary-button'
+    %br
+    .information
+      You can also send us an email at support@tablereserved.com.

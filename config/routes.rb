@@ -31,7 +31,8 @@ TableReservation::Application.routes.draw do
   match 'passwords/generate' => 'passwords#generate', :as => :generate_password
   match 'passwords/update' => 'passwords#update', :as => :update_password
 
-
+  match 'contact' => 'contact#show', :as => :contact
+  match 'contact/send' => 'contact#send_mail', :as => :contact_send
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
