@@ -6,7 +6,7 @@ describe UserMailer do
     password = "password"
     email = UserMailer.password_email("test@test.com", password).deliver
     ActionMailer::Base.deliveries.should_not be_empty
-    email.subject.should == "Your temporary password for TableReserved"
+    email.subject.should == "Temporary Password"
     email.encoded.include?(password).should be_true
   end
 
