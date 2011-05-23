@@ -4,8 +4,13 @@
 #gap
 #page
   #forgot-password
-    An email with a temporary password has been sent your email address. You can now login with this new password.
-    %p
-    To change the temporary password, visit the 'My Account' section after
-    = link_to "logging in", login_url
-    = "."
+    - if @user
+      An email with a temporary password has been sent your email address. You can now login with this new password.
+      %p
+      To change the temporary password, visit the 'My Account' section after
+      = link_to "logging in", login_url
+      = "."
+    - else
+      The email address you entered does not match our records.  Please try entering the email address that you may have used to register or feel free to
+      = link_to "register", login_url
+      again with this secondary email address.
