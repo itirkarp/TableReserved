@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default :from => "admin@tablereserved.com"
+  default :from => "Table Reserved"
 
   def password_email email, password
     @password = password

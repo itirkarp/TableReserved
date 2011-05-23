@@ -56,7 +56,7 @@ TableReservation::Application.configure do
       :port => 587,
       :domain => 'tablereserved.com',
       :user_name => 'admin@tablereserved.com',
-      :password => 'tablereserved333',
+      :password => 'table333',
       :authentication => 'plain',
       :enable_starttls_auto => true}
 
