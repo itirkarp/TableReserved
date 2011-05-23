@@ -1,4 +1,4 @@
-TableReservation::Application.routes.draw do
+TableReservation::Application.routes.draw do |map|
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
   match 'signup' => 'users#new', :as => :signup
@@ -33,6 +33,10 @@ TableReservation::Application.routes.draw do
 
   match 'contact' => 'contact#show', :as => :contact
   match 'contact/send' => 'contact#send_mail', :as => :contact_send
+
+  map.with_options :controller => 'static' do |static|
+    static.careers 'careers', :action => 'careers'
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
