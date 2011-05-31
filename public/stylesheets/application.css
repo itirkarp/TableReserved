@@ -309,6 +309,9 @@
     #users table .headerSortDown {
       background-color: #b0c4de; }
 
+#container {
+  height: 500px; }
+
 #user-information {
   padding: 30px 20px 0 40px;
   width: 560px;
@@ -351,7 +354,8 @@
       width: 249px; }
 
 #user-edit {
-  padding: 50px 0 0 80px; }
+  padding: 50px 0 0 80px;
+  height: 500px; }
   #user-edit form {
     padding-top: 10px;
     line-height: 35px; }
@@ -385,7 +389,7 @@
     width: 6em;
     margin: 50px 0 0 160px; }
   #contact .information {
-    padding-top: 50px;
+    padding: 50px 0 20px 0;
     clear: both;
     font-size: 16px; }
 
@@ -408,133 +412,135 @@ a {
   a img {
     border: none; }
 
-#container #gap {
-  height: 0.7em;
-  background-color: #4162ad;
-  opacity: 0.9; }
-#container #page {
-  height: 100%;
-  width: 970px;
-  margin: 0 auto;
-  background-color: #e8f0f7;
-  position: relative; }
-  #container #page #tabs {
-    float: left;
-    width: 100%;
-    height: 55px;
-    margin-bottom: 30px;
-    background: -moz-linear-gradient(center bottom, #11083a 0pt, #2a4187 100%) repeat scroll 0 0 transparent;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #11083a), color-stop(1, #2a4187));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2A4187, endColorstr=#11083A);
-    ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#2A4187, endColorstr=#11083A)"; }
-    #container #page #tabs #tab-container {
+#container {
+  height: 1000px; }
+  #container #gap {
+    height: 0.7em;
+    background-color: #4162ad;
+    opacity: 0.9; }
+  #container #page {
+    height: 100%;
+    width: 970px;
+    margin: 0 auto;
+    background-color: #e8f0f7;
+    position: relative; }
+    #container #page #tabs {
+      float: left;
       width: 100%;
-      position: relative; }
-      #container #page #tabs #tab-container ul li {
-        float: right;
-        list-style: none;
-        padding: 0 50px;
-        margin-top: -1.1em;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border: 0.1em solid #2a4187; }
-      #container #page #tabs #tab-container ul li.ui-tabs-selected {
-        float: right;
-        list-style: none;
-        padding: 0 50px;
-        opacity: 0.8;
-        background-color: #292360;
-        margin-top: -1.1em;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border: 0.1em solid #2a4187; }
-      #container #page #tabs #tab-container ul a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.3em;
-        display: block; }
-    #container #page #tabs #tabs-1 {
-      float: left;
-      width: 100%; }
-      #container #page #tabs #tabs-1 #restaurant-box {
-        clear: both;
-        margin: 4em 0 2em 2em;
-        width: 910px;
-        height: 27em;
-        border: 1px solid #c1cdcd;
+      height: 55px;
+      margin-bottom: 30px;
+      background: -moz-linear-gradient(center bottom, #11083a 0pt, #2a4187 100%) repeat scroll 0 0 transparent;
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #11083a), color-stop(1, #2a4187));
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#2A4187, endColorstr=#11083A);
+      ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#2A4187, endColorstr=#11083A)"; }
+      #container #page #tabs #tab-container {
+        width: 100%;
         position: relative; }
-        #container #page #tabs #tabs-1 #restaurant-box #heading {
-          float: left;
-          padding: 0 0 0.5em 1em;
-          height: 4.5;
-          background: -moz-linear-gradient(center bottom, #f7f7f7 10pt, #e8f0f7 100%) repeat scroll 0 0 transparent;
-          background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #e8f0f7 n));
-          width: 895px; }
-          #container #page #tabs #tabs-1 #restaurant-box #heading p {
-            margin: 0 0;
+        #container #page #tabs #tab-container ul li {
+          float: right;
+          list-style: none;
+          padding: 0 50px;
+          margin-top: -1.1em;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border: 0.1em solid #2a4187; }
+        #container #page #tabs #tab-container ul li.ui-tabs-selected {
+          float: right;
+          list-style: none;
+          padding: 0 50px;
+          opacity: 0.8;
+          background-color: #292360;
+          margin-top: -1.1em;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          border: 0.1em solid #2a4187; }
+        #container #page #tabs #tab-container ul a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1.3em;
+          display: block; }
+      #container #page #tabs #tabs-1 {
+        float: left;
+        width: 100%; }
+        #container #page #tabs #tabs-1 #restaurant-box {
+          clear: both;
+          margin: 4em 0 2em 2em;
+          width: 910px;
+          height: 27em;
+          border: 1px solid #c1cdcd;
+          position: relative; }
+          #container #page #tabs #tabs-1 #restaurant-box #heading {
+            float: left;
+            padding: 0 0 0.5em 1em;
+            height: 4.5;
+            background: -moz-linear-gradient(center bottom, #f7f7f7 10pt, #e8f0f7 100%) repeat scroll 0 0 transparent;
+            background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #e8f0f7 n));
+            width: 895px; }
+            #container #page #tabs #tabs-1 #restaurant-box #heading p {
+              margin: 0 0;
+              float: left; }
+            #container #page #tabs #tabs-1 #restaurant-box #heading .description {
+              margin-top: -0.2em;
+              color: #1874cd; }
+          #container #page #tabs #tabs-1 #restaurant-box .primary-button {
+            float: left;
+            margin: 11px 0 5px 0; }
+          #container #page #tabs #tabs-1 #restaurant-box #photo {
             float: left; }
-          #container #page #tabs #tabs-1 #restaurant-box #heading .description {
-            margin-top: -0.2em;
-            color: #1874cd; }
-        #container #page #tabs #tabs-1 #restaurant-box .primary-button {
-          float: left;
-          margin: 11px 0 5px 0; }
-        #container #page #tabs #tabs-1 #restaurant-box #photo {
-          float: left; }
-          #container #page #tabs #tabs-1 #restaurant-box #photo img {
-            height: 23.5em;
-            width: 37em; }
-        #container #page #tabs #tabs-1 #restaurant-box #information {
-          float: left;
-          border-top: 1px solid #c1cdcd;
-          width: 25em;
-          padding: 0.3em 0 0 1.5em; }
-          #container #page #tabs #tabs-1 #restaurant-box #information #restaurant-logo {
+            #container #page #tabs #tabs-1 #restaurant-box #photo img {
+              height: 23.5em;
+              width: 37em; }
+          #container #page #tabs #tabs-1 #restaurant-box #information {
             float: left;
-            margin-bottom: 20px; }
-          #container #page #tabs #tabs-1 #restaurant-box #information #address {
-            width: 177px;
-            float: left;
-            margin: 35px 0 0 5px;
-            line-height: 25px;
-            font-size: 13.5px; }
-          #container #page #tabs #tabs-1 #restaurant-box #information img {
-            height: 9em;
-            width: 12em; }
-          #container #page #tabs #tabs-1 #restaurant-box #information p {
-            margin: 0 0; }
-          #container #page #tabs #tabs-1 #restaurant-box #information .fields {
-            clear: both;
-            margin-top: 0.5em;
-            font-size: 1.3em;
-            color: #1874cd; }
-    #container #page #tabs #tabs-2 {
-      float: left;
-      margin: 9em 0 0 2em; }
-    #container #page #tabs #tabs-3 {
-      float: left;
-      margin: 9em 0 0 2em; }
-  #container #page #footer {
-    width: 75%;
-    margin: 0 0 2em 11em;
-    position: absolute;
-    bottom: 0; }
-    #container #page #footer a {
-      margin: 2px 2px 0 2px;
-      text-decoration: none;
-      color: black; }
-  #container #page #forgot-password {
-    padding: 20px 40px 0 40px; }
-    #container #page #forgot-password input {
-      margin-left: 10px; }
-    #container #page #forgot-password .button {
-      margin-left: 245px; }
-    #container #page #forgot-password .email {
-      margin-top: 50px; }
-    #container #page #forgot-password .login {
-      margin-left: 5px;
-      font-size: 16px; }
+            border-top: 1px solid #c1cdcd;
+            width: 25em;
+            padding: 0.3em 0 0 1.5em; }
+            #container #page #tabs #tabs-1 #restaurant-box #information #restaurant-logo {
+              float: left;
+              margin-bottom: 20px; }
+            #container #page #tabs #tabs-1 #restaurant-box #information #address {
+              width: 177px;
+              float: left;
+              margin: 35px 0 0 5px;
+              line-height: 25px;
+              font-size: 13.5px; }
+            #container #page #tabs #tabs-1 #restaurant-box #information img {
+              height: 9em;
+              width: 12em; }
+            #container #page #tabs #tabs-1 #restaurant-box #information p {
+              margin: 0 0; }
+            #container #page #tabs #tabs-1 #restaurant-box #information .fields {
+              clear: both;
+              margin-top: 0.5em;
+              font-size: 1.3em;
+              color: #1874cd; }
+      #container #page #tabs #tabs-2 {
+        float: left;
+        margin: 9em 0 0 2em; }
+      #container #page #tabs #tabs-3 {
+        float: left;
+        margin: 9em 0 0 2em; }
+    #container #page #footer {
+      width: 75%;
+      margin: 0 0 2em 11em;
+      position: absolute;
+      bottom: 0; }
+      #container #page #footer a {
+        margin: 2px 2px 0 2px;
+        text-decoration: none;
+        color: black; }
+    #container #page #forgot-password {
+      padding: 20px 40px 0 40px; }
+      #container #page #forgot-password input {
+        margin-left: 10px; }
+      #container #page #forgot-password .button {
+        margin-left: 245px; }
+      #container #page #forgot-password .email {
+        margin-top: 50px; }
+      #container #page #forgot-password .login {
+        margin-left: 5px;
+        font-size: 16px; }
 
 .primary-button {
   height: 26px;
