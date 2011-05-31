@@ -134,7 +134,8 @@
     float: left;
     width: 270px; }
     #content #login .field {
-      width: 175px; }
+      width: 175px;
+      background-color: white; }
   #content #signup {
     background-color: black;
     float: right;
