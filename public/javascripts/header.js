@@ -10,4 +10,6 @@ $(document).ready(function() {
         else
             citiesDropDown.addClass('hidden');
     });
+
+    $('#container').height($('#tabs-1').height() + 200);
 });
