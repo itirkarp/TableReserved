@@ -4,8 +4,10 @@
 
 #page
   #contact
+    %h2
+      Contact Us
     = flash[:notice]
-    %h3 Fill out the form below to contact us. All the information is required.
+    %h3 Fill out the form below to contact us. All fields are required.
     = form_tag contact_send_url do
       = label_tag :name, "Name"
       = text_field_tag :name, params[:name]

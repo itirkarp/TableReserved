@@ -326,7 +326,7 @@
       #user-information .information table tr.alternate {
         background-color: lightSteelBlue; }
   #user-information .link {
-    margin: 30px 0 0 150px;
+    margin-top: 30px;
     font-size: 17px; }
 
 .header {
@@ -347,8 +347,6 @@
     width: 235px; }
   #edit-password form {
     margin: 20px 0 0 10px; }
-    #edit-password form .primary-button {
-      margin-left: 100px; }
     #edit-password form .error {
       width: 249px; }
 
@@ -362,6 +360,8 @@
 
 #contact {
   padding: 25px 0 0 40px; }
+  #contact h2 {
+    color: #11083a; }
   #contact h3 {
     font-size: 20px;
     color: #1874cd;
@@ -383,9 +383,9 @@
   #contact .primary-button {
     clear: both;
     width: 6em;
-    margin: 50px 0 0 237px; }
+    margin: 50px 0 0 160px; }
   #contact .information {
-    padding: 50px 0 0 40px;
+    padding-top: 50px;
     clear: both;
     font-size: 16px; }
 
@@ -586,3 +586,5 @@ a {
 
 #careers {
   padding: 30px 20px 0 20px; }
+  #careers h2 {
+    color: #11083a; }
