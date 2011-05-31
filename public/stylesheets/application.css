@@ -47,6 +47,27 @@
             color: lightGrey;
             text-decoration: none;
             display: block; }
+  #header #share-link {
+    float: left;
+    margin: 24px 0 0 -32px; }
+  #header #share {
+    float: left;
+    color: white;
+    font-size: 11px;
+    margin: 55px 0 0 400px; }
+  #header #follow-links {
+    float: left;
+    margin: 24px 0 0 8px; }
+    #header #follow-links a {
+      float: left;
+      height: 30px;
+      width: 30px;
+      display: block; }
+    #header #follow-links #facebook {
+      background-image: url("../../images/facebook.png"); }
+    #header #follow-links #twitter {
+      margin-left: 10px;
+      background-image: url("../../images/twitter.png"); }
   #header #access-links {
     float: right;
     margin-right: 9%; }
@@ -62,6 +83,9 @@
       width: 1px;
       opacity: 0.6;
       margin-top: 2em; }
+  #header a {
+    text-decoration: none;
+    color: white; }
 
 #content {
   background-color: black;
@@ -105,12 +129,14 @@
     background: url("../../images/separator.png") repeat-y;
     margin-left: 42px; }
   #content #login {
+    background-color: black;
     clear: both;
     float: left;
     width: 270px; }
     #content #login .field {
       width: 175px; }
   #content #signup {
+    background-color: black;
     float: right;
     width: 280px;
     height: 430px; }
