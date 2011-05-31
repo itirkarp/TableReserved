@@ -396,13 +396,11 @@
   width: 160px; }
 
 html {
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
 
 body {
   background-color: lightSteelBlue;
-  height: 100%;
-  overflow: hidden;
+  height: 3000px;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 
@@ -418,7 +416,6 @@ a {
     background-color: #4162ad;
     opacity: 0.9; }
   #container #page {
-    overflow: auto;
     height: 100%;
     width: 970px;
     margin: 0 auto;
