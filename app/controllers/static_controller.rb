@@ -5,4 +5,7 @@ class StaticController < ApplicationController
   def careers
   end
 
+  def about_us
+  end
+
 end

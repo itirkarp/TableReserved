@@ -36,6 +36,7 @@ TableReservation::Application.routes.draw do |map|
 
   map.with_options :controller => 'static' do |static|
     static.careers 'careers', :action => 'careers'
+    static.about 'about', :action => 'about'
   end
 
   # The priority is based upon order of creation:
